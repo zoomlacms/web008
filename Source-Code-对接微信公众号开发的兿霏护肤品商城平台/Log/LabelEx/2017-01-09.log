@@ -1,0 +1,645 @@
+﻿﻿操作人：(用户名:,管理员名:,IP:58.217.244.152)
+时间：(2017/1/9 14:57:46),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.244.152)
+时间：(2017/1/9 14:57:46),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.244.152)
+时间：(2017/1/9 14:57:46),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.244.152)
+时间：(2017/1/9 14:57:47),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.244.152)
+时间：(2017/1/9 14:57:47),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.244.152)
+时间：(2017/1/9 14:57:47),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.244.152)
+时间：(2017/1/9 14:58:02),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.244.152)
+时间：(2017/1/9 14:58:02),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.244.152)
+时间：(2017/1/9 14:58:02),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:101.226.64.177)
+时间：(2017/1/9 14:58:04),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:101.226.64.177)
+时间：(2017/1/9 14:58:04),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:101.226.64.177)
+时间：(2017/1/9 14:58:04),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:56:03),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:56:03),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:56:03),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:56:14),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:56:14),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:56:14),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:56:27),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:56:27),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:56:27),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:56:30),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:56:30),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:56:30),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:09),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:09),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:09),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:16),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:16),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:17),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:21),操作：(labelex),来源：(/Index?type=1)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:21),操作：(labelex),来源：(/Index?type=1)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:21),操作：(labelex),来源：(/Index?type=1)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:22),操作：(labelex),来源：(/Index?type=1)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:22),操作：(labelex),来源：(/Index?type=1)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:22),操作：(labelex),来源：(/Index?type=1)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:23),操作：(labelex),来源：(/Index?type=1)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:23),操作：(labelex),来源：(/Index?type=1)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 16:58:23),操作：(labelex),来源：(/Index?type=1)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 17:01:17),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 17:01:17),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:180.173.121.26)
+时间：(2017/1/9 17:01:17),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.85.248.98)
+时间：(2017/1/9 17:10:52),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.85.248.98)
+时间：(2017/1/9 17:10:52),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.85.248.98)
+时间：(2017/1/9 17:10:52),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:223.104.5.230)
+时间：(2017/1/9 19:00:17),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:223.104.5.230)
+时间：(2017/1/9 19:00:17),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:223.104.5.230)
+时间：(2017/1/9 19:00:17),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:223.104.5.230)
+时间：(2017/1/9 19:00:36),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:223.104.5.230)
+时间：(2017/1/9 19:00:36),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:223.104.5.230)
+时间：(2017/1/9 19:00:36),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:223.104.5.230)
+时间：(2017/1/9 19:03:43),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:223.104.5.230)
+时间：(2017/1/9 19:03:43),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:223.104.5.230)
+时间：(2017/1/9 19:03:43),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.180.111)
+时间：(2017/1/9 20:05:45),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.180.111)
+时间：(2017/1/9 20:05:45),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.180.111)
+时间：(2017/1/9 20:05:45),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.187.152)
+时间：(2017/1/9 20:14:21),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.187.152)
+时间：(2017/1/9 20:14:21),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.187.152)
+时间：(2017/1/9 20:14:21),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.244.150)
+时间：(2017/1/9 20:14:31),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.244.150)
+时间：(2017/1/9 20:14:31),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:58.217.244.150)
+时间：(2017/1/9 20:14:31),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:37:39),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:37:39),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:37:39),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:37:41),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:37:41),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:37:41),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:39:57),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:39:57),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:39:57),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:40:28),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:40:28),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:40:28),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:41:06),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:41:06),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:41:06),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:43:56),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:43:56),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:43:56),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:43:58),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:43:58),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:43:58),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:15),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:15),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:15),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:26),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:26),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:26),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:43),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:43),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:43),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:46),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:46),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:46),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:48),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:48),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:48),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:49),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:49),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:49),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:51),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:51),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:45:51),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:46:01),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:46:01),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:46:01),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:46:07),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:46:07),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:46:07),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:46:11),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:46:11),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:46:11),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:46:12),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:46:12),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.149.168.128)
+时间：(2017/1/9 20:46:12),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.135.239.149)
+时间：(2017/1/9 21:02:56),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.135.239.149)
+时间：(2017/1/9 21:02:56),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.135.239.149)
+时间：(2017/1/9 21:02:56),操作：(labelex),来源：(/Index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:139.214.254.162)
+时间：(2017/1/9 23:12:27),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:139.214.254.162)
+时间：(2017/1/9 23:12:27),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:139.214.254.162)
+时间：(2017/1/9 23:12:27),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:106.6.77.106)
+时间：(2017/1/9 23:43:52),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:106.6.77.106)
+时间：(2017/1/9 23:43:52),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:106.6.77.106)
+时间：(2017/1/9 23:43:52),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:106.6.77.106)
+时间：(2017/1/9 23:43:53),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出贴吧达人" ShowNum="9" /},报错：SelByLabel:PostNum Desc,报错:Message:列名 'PostNum' 无效。,SQL:SELECT TOP 9 * FROM (SELECT ROW_Number() OVER( ORDER BY PostNum Desc) RowNum, UserID,UserName,HName= CASE WHEN HoneyName<>'' THEN HoneyName ELSE UserName END,UserFace=(Select UserFace from ZL_UserBase where ZL_UserBase.UserID=ZL_User.UserID),PostNum=(Select Count(*) from ZL_Guest_Bar where Pid=0  and Status=1 and CUName=ZL_User.UserName) FROM ZL_User WHERE  UserID!=0) ZL_User WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:106.6.77.106)
+时间：(2017/1/9 23:43:53),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出热帖推荐" ShowNum="5" TitleNum="40" /},报错：SelByLabel:ReplyNum DESC,CDate DESC,报错:Message:列名 'ReplyNum' 无效。,SQL:SELECT TOP 5 * FROM (SELECT ROW_Number() OVER( ORDER BY ReplyNum DESC,CDate DESC) RowNum, ReplyNum=(select COUNT(*) from ZL_Guest_Bar where Pid=ZL_Guest_Bar.ID),ID,Subtitle,Title FROM ZL_Guest_Bar WHERE  Pid=0 And Status=1) ZL_Guest_Bar WHERE RowNum>0,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:106.6.77.106)
+时间：(2017/1/9 23:43:53),操作：(labelex),来源：(/index)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="贴吧输出热点新闻" NodeID="1" TitleNum="20" ShowNum="2" SysNum="40" /},报错：SelByLabel:ZL_CommonModel.CreateTime DESC,报错:Message:列名 'pic' 无效。,SQL:SELECT COUNT(*) FROM ZL_CommonModel ZL_CommonModel LEFT JOIN ZL_C_Article ZL_C_Article ON  ZL_CommonModel.ItemID=ZL_C_Article.ID WHERE  (NodeID=1 or FirstNodeID=1) And Status=99 And ZL_C_Article.pic<>'',SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 

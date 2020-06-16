@@ -1,0 +1,63 @@
+﻿@using ZoomLa.BLL;
+@using ZoomLa.Model;
+@model ZoomLa.SQLDAL.SQL.PageSetting
+@{
+    Layout = "~/Areas/User/Views/Shared/_layout.cshtml";
+    M_UserInfo mu = new B_User().GetLogin();
+    M_Group groupMod = new M_Group();
+    B_Group groupBll = new B_Group();
+    groupMod = groupBll.SelReturnModel(mu.GroupID);
+    string truename = mu.UserName;
+    if (!string.IsNullOrEmpty(mu.TrueName))
+    {
+        truename = mu.TrueName;
+    }
+}
+@section head{
+<title>优惠劵管理</title>
+<style>
+.arrive .nav-tabs>li { width:33.333%}
+.arrive .nav-tabs>li a { text-align:center; margin-right:0;}
+</style>
+}
+@section content{
+<div id="pageflag" data-nav="group" data-ban="ArriveManage"></div>
+<div class="container margin_t5" hidden>
+    <ol class="breadcrumb">
+        <li><a href="/User">会员中心</a></li>
+        <li><a href="@Url.Action("UserInfo","Info")">账户管理</a></li>
+        <li>优惠劵管理</li>
+    </ol>
+</div>
+<div class="muser_top">
+<div class="container">
+<div class="media">
+<div class="media-left"><a href="/User/Info/UserBase"><img src="@mu.UserFace" alt="@mu.UserName" onerror="javascript:this.src='/Images/userface/noface.png';" /></a></div>
+<div class="media-body media-middle">
+<p class="muser_p"><span>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"获取当前登录用户真实姓名\"/}"))</span><span><span>@groupMod.GroupName</span></span><a href="/wxshare.aspx" id="wxshare">我的二维码</a></p>
+<h4>上次登陆时间：@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"获取当前登录用户上次登录时间\"/}")) </h4>
+<p><a href="/User/Info/UserBase"> 账号管理 </a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="container arrive padding0_xs">
+<ul class="nav nav-tabs">
+    <li id="tab1"><a href="ArriveManage?State=1">未使用</a></li>
+    <li id="tab2"><a href="ArriveManage?State=10">已使用</a></li>
+    <li id="tab3"><a href="ArriveManage?addon=expired">已过期</a></li>
+</ul>
+@Html.Partial("ArriveManage_List",Model)
+</div>
+}
+@section script{
+    <script>
+        $(function () {
+            var state = '@Request.QueryString["state"]';
+            var addon = '@Request.QueryString["addon"]';
+            if(addon=='expired'){ $("#tab3").addClass("active"); }
+            else if (state == '10') { $("#tab2").addClass("active"); }
+            else { $("#tab1").addClass("active"); }
+        })
+    </script>
+}

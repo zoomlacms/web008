@@ -1,0 +1,76 @@
+﻿﻿操作人：(用户名:,管理员名:,IP:101.85.110.214)
+时间：(2018/5/27 8:58:04),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:223.11.189.25)
+时间：(2018/5/27 15:28:03),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:125.118.128.162)
+时间：(2018/5/27 16:52:34),操作：(labelex),来源：(/Item/26.aspx)
+详情：(来源：B_CreateHtml,方法名：CreateHtml(),标签：,报错：XML 注释中不能包含“--”，并且“-”不能是最后一个字符。 第 30 行，位置 9。,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:27.27.72.217)
+时间：(2018/5/27 17:45:42),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:101.85.110.214)
+时间：(2018/5/27 18:48:05),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:220.181.108.170)
+时间：(2018/5/27 19:49:39),操作：(labelex),来源：(/user/Logout)
+详情：(用户缓存出错:给定关键字不在字典中。)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.102.228.80)
+时间：(2018/5/27 21:34:18),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.102.228.80)
+时间：(2018/5/27 21:34:23),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.102.228.80)
+时间：(2018/5/27 21:34:26),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.102.228.80)
+时间：(2018/5/27 21:34:45),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:36.102.228.80)
+时间：(2018/5/27 21:35:47),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:111.183.132.29)
+时间：(2018/5/27 22:57:17),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:111.183.132.29)
+时间：(2018/5/27 22:57:28),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 

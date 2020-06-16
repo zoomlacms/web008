@@ -1,0 +1,156 @@
+﻿操作人：(用户名:,管理员名:,IP:106.11.155.61)
+时间：(2018/6/23 5:08:20),操作：(labelex),来源：(/Item/13.aspx)
+详情：(来源：B_CreateHtml,方法名：CreateHtml(),标签：,报错：XML 注释中不能包含“--”，并且“-”不能是最后一个字符。 第 30 行，位置 9。,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:106.11.152.59)
+时间：(2018/6/23 5:53:10),操作：(labelex),来源：(/Item/52.aspx)
+详情：(来源：B_CreateHtml,方法名：CreateHtml(),标签：,报错：XML 注释中不能包含“--”，并且“-”不能是最后一个字符。 第 30 行，位置 9。,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:123.13.255.231)
+时间：(2018/6/23 6:40:18),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:61.151.226.62)
+时间：(2018/6/23 6:41:18),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:183.199.184.36)
+时间：(2018/6/23 8:42:28),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:117.27.63.137)
+时间：(2018/6/23 11:46:12),操作：(labelex),来源：(/Item/19.aspx)
+详情：(来源：B_CreateHtml,方法名：CreateHtml(),标签：,报错：XML 注释中不能包含“--”，并且“-”不能是最后一个字符。 第 30 行，位置 9。,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:117.27.63.137)
+时间：(2018/6/23 11:46:20),操作：(labelex),来源：(/Item/15.aspx)
+详情：(来源：B_CreateHtml,方法名：CreateHtml(),标签：,报错：XML 注释中不能包含“--”，并且“-”不能是最后一个字符。 第 30 行，位置 9。,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:117.27.63.137)
+时间：(2018/6/23 11:46:30),操作：(labelex),来源：(/Item/9.aspx)
+详情：(来源：B_CreateHtml,方法名：CreateHtml(),标签：,报错：XML 注释中不能包含“--”，并且“-”不能是最后一个字符。 第 30 行，位置 9。,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:117.27.63.137)
+时间：(2018/6/23 11:46:33),操作：(labelex),来源：(/Item/12.aspx)
+详情：(来源：B_CreateHtml,方法名：CreateHtml(),标签：,报错：XML 注释中不能包含“--”，并且“-”不能是最后一个字符。 第 30 行，位置 9。,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:117.135.173.79)
+时间：(2018/6/23 11:47:21),操作：(labelex),来源：(/Item/15.aspx)
+详情：(来源：B_CreateHtml,方法名：CreateHtml(),标签：,报错：XML 注释中不能包含“--”，并且“-”不能是最后一个字符。 第 30 行，位置 9。,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:101.226.86.162)
+时间：(2018/6/23 11:47:31),操作：(labelex),来源：(/Item/9.aspx)
+详情：(来源：B_CreateHtml,方法名：CreateHtml(),标签：,报错：XML 注释中不能包含“--”，并且“-”不能是最后一个字符。 第 30 行，位置 9。,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:61.151.226.85)
+时间：(2018/6/23 11:47:34),操作：(labelex),来源：(/Item/12.aspx)
+详情：(来源：B_CreateHtml,方法名：CreateHtml(),标签：,报错：XML 注释中不能包含“--”，并且“-”不能是最后一个字符。 第 30 行，位置 9。,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:106.11.154.62)
+时间：(2018/6/23 13:45:56),操作：(labelex),来源：(/Item/2.aspx)
+详情：(来源：B_CreateHtml,方法名：CreateHtml(),标签：,报错：XML 注释中不能包含“--”，并且“-”不能是最后一个字符。 第 30 行，位置 9。,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:106.11.155.61)
+时间：(2018/6/23 14:38:48),操作：(labelex),来源：(/Item/1.aspx)
+详情：(来源：B_CreateHtml,方法名：CreateHtml(),标签：,报错：XML 注释中不能包含“--”，并且“-”不能是最后一个字符。 第 30 行，位置 9。,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:111.176.23.160)
+时间：(2018/6/23 14:47:30),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:111.176.23.160)
+时间：(2018/6/23 14:49:46),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:125.88.24.115)
+时间：(2018/6/23 15:57:27),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:101.226.79.234)
+时间：(2018/6/23 15:58:28),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:106.11.155.61)
+时间：(2018/6/23 18:18:35),操作：(labelex),来源：(/Item/8.aspx)
+详情：(来源：B_CreateHtml,方法名：CreateHtml(),标签：,报错：XML 注释中不能包含“--”，并且“-”不能是最后一个字符。 第 30 行，位置 9。,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:113.127.17.184)
+时间：(2018/6/23 19:29:43),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:113.127.17.184)
+时间：(2018/6/23 19:29:52),操作：(labelex),来源：(/Class_11/NodeNews.aspx?k=%E6%B4%BB%E5%8A%A8)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="活动" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%活动%' or Permissions like '%活动%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:113.127.17.184)
+时间：(2018/6/23 19:29:53),操作：(labelex),来源：(/Class_11/NodeNews.aspx?k=%E6%B4%BB%E5%8A%A8)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="活动" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%活动%' or Permissions like '%活动%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:113.127.17.184)
+时间：(2018/6/23 19:29:55),操作：(labelex),来源：(/Class_11/NodeNews.aspx?k=%E6%B4%BB%E5%8A%A8)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="活动" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%活动%' or Permissions like '%活动%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:113.127.17.184)
+时间：(2018/6/23 19:29:56),操作：(labelex),来源：(/Class_11/NodeNews.aspx?k=%E6%B4%BB%E5%8A%A8)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="活动" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%活动%' or Permissions like '%活动%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:113.127.17.184)
+时间：(2018/6/23 19:29:56),操作：(labelex),来源：(/Class_11/NodeNews.aspx?k=%E6%B4%BB%E5%8A%A8)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="活动" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%活动%' or Permissions like '%活动%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:101.226.79.239)
+时间：(2018/6/23 19:30:52),操作：(labelex),来源：(/Class_11/NodeNews.aspx?k=%E6%B4%BB%E5%8A%A8)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="活动" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%活动%' or Permissions like '%活动%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:123.171.2.224)
+时间：(2018/6/23 21:20:15),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:183.40.76.76)
+时间：(2018/6/23 22:14:19),操作：(labelex),来源：(/Class_11/NodeNews.aspx)
+详情：(来源：B_CreateHtml,方法名：ContentLabelProc1,标签：{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="" /},报错：SelByLabel:OrderID DESC,报错:Message:列名 'ID' 不明确。
+由于绑定错误，无法使用视图或函数 'ZL_Expert_View'。,SQL:SELECT COUNT(*) From ZL_Expert_View WHERE  Status=99 And ModelID=49 And (CompanyName like '%%' or Permissions like '%%'),SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 

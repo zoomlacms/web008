@@ -1,0 +1,62 @@
+﻿@using ZoomLa.Model;
+@using ZoomLa.BLL;
+@using System.Data
+@model ZoomLa.SQLDAL.SQL.PageSetting
+@{
+    DataTable dt = new DataTable();
+    Layout = "~/Areas/User/Views/Shared/_layout.cshtml";
+    M_UserInfo mu = new B_User().GetLogin();
+    M_Group groupMod = new M_Group();
+    B_Group groupBll = new B_Group();
+    groupMod = groupBll.SelReturnModel(mu.GroupID);
+}
+@section head{<title>用户地址薄</title>
+
+}
+@section content{
+    <div id="pageflag" data-nav="shop" data-ban="shop"></div>
+<div class="muser_top">
+<div class="container">
+<div class="media">
+<div class="media-left"><a href="/User/Info/UserBase"><img src="@mu.UserFace" alt="@mu.UserName" onerror="javascript:this.src='/Images/userface/noface.png';" /></a></div>
+<div class="media-body media-middle">
+<p class="muser_p"><span>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"获取当前登录用户真实姓名\"/}"))</span><span><span>@groupMod.GroupName</span></span><a href="/wxshare.aspx" id="wxshare">我的二维码</a></p>
+<h4>上次登陆时间：@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"获取当前登录用户上次登录时间\"/}")) </h4>
+<p><a href="/User/Info/UserBase"> 账号管理 </a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="container muser_info padding0_xs">
+<div role="tabpanel">
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation"><a href="/User/Info/UserBase">基本资料</a></li>
+<li role="presentation"><a href="/User/Change/Pwd">修改密码</a></li>
+<li role="presentation"><a href="/User/Change/Mobile">手机绑定</a></li>
+<li role="presentation" class="active"><a href="/User/Info/UserRecei">我的地址</a></li>
+</ul>
+</div>
+</div>
+    <div class="container margin_t5" hidden>
+        <ol class="breadcrumb" style="margin-bottom:5px;">
+            <li><a title="会员中心" href="@Url.Action("Default","")">会员中心</a></li>
+            <li class="active">我的地址薄</li>
+        </ol>
+    </div>
+@Html.Partial("UserRecel_List", Model)
+   
+}
+@section script{
+<style type="text/css">
+    .add_left {text-align: right;color: #999;display: inline-block;width: 70px;line-height: 22px;}
+    .panel:hover {background-color: #fcfcfc;border: solid 1px #28c3fc;}
+</style>
+<script>
+$().ready(function(e) {
+	$("#wxshare").hide();
+    var gid='@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"获取当前登录用户会员组ID\"/}"))';
+    if(gid=="3") $("#wxshare").show();
+});
+</script>
+}

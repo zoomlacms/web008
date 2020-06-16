@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>316</LabelID>
+    <LabelName>获取当前用户指定会员组一级会员总数</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>艺菲专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>GroupID,1,1,会员组</LabelParam>
+    <LabelTable>ZL_User</LabelTable>
+    <LabelField>Count(*) As Num</LabelField>
+    <LabelWhere>ParentUserID='{ZL:GetuserID()/}' And GroupID='@GroupID'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="Num"/}</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

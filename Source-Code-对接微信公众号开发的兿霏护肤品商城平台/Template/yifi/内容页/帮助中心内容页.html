@@ -1,0 +1,67 @@
+﻿{ZL.Source id="文章模型数据源标签"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="文章模型数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="文章模型数据源标签" FD="Tagkey" page="0"/}" />
+<meta name="Description" content="{SField sid="文章模型数据源标签" FD="Title" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="/JS/Controls/B_User.js"></script>
+</head>
+<body style="background:#f5f5f5;">
+{ZL.Label id="新版全站头部"/}
+<div class="home_banner">
+<div>
+<h4>护肤程序最简化</h4>
+<p>简化护肤程序，还原女性之美</p>
+<h4>产品配方最简化</h4>
+<p>无色素、无香精、无化学防腐剂</p>
+<p>删减不必要辅料，减轻皮肤负担</p>
+<h4>产品选材最优化</h4>
+<p>精选进口原材料，保障产品功效</p>
+</div>
+</div>
+<!--banner图结束-->
+<div class="container margin_top20 margin_bot20">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="help_tit">
+<h3>{ZL.Label id="根据指定ID输出指定节点名" NodeID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" /}</h3>
+<ul>
+{ZL.Label id="输出节点下文章标题" NodeID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" TitleNum="100" /}
+</ul>
+</div>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+<div class="help_con">
+<h1>{SField sid="文章模型数据源标签" FD="Title" page="0"/}</h1>
+{SField sid="文章模型数据源标签" FD="content" page="0"/}
+</div>
+</div>
+</div>
+</div>
+{ZL.Label id="新版全站底部"/}
+</body>
+</html>
+<script>
+var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		$(".home_top_l a:nth-child(1)").html("欢迎您，"+data.UserName);
+		$(".home_top_l a:nth-child(1)").attr("href","/User");
+		$(".home_top_l a:nth-child(2)").hide();
+		$(".home_top_l a:nth-child(3)").show();
+	}
+	else{
+		$(".home_top_l a:nth-child(3)").hide();
+	}
+});
+function LogoutFun()
+{
+	buser.Logout(function(){location=location;});
+}
+</script>

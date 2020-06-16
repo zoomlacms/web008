@@ -1,0 +1,67 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<style>
+.yfzj_search { margin-top:40px; font-family:"STHeiti","Microsoft YaHei","黑体","arial";}
+.yfzj_search_l { float:left; margin-right:20px; font-size:24px; color:#5e5e5e;}
+.yfzj_search_s { float:left; }
+.yfzj_search_s .form-control { float:left; margin-right:10px; width:200px; border-radius:0;}
+.yfzj_list { margin-top:30px; padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; border:9px solid #f5f5f5; font-family:"STHeiti","Microsoft YaHei","黑体","arial";}
+.yfzj_list h3 { margin-top:0; margin-bottom:5px; font-size:1.1em; font-weight:bold; height:20px; line-height:20px; overflow:hidden;}
+.yfzj_list h3 span { margin-right:10px;}
+.yfzj_list h3 a { color:#12a8e7;}
+.yfzj_list h3 a:hover { color:#ff7000;}
+.yfzj_list p { margin-bottom:0; color:#888; line-height:1.7em;}
+</style>
+</head>
+<body>
+{ZL.Label id="新版全站头部"/}
+
+<div class="home_banner">
+<div>
+<h4>护肤程序最简化</h4>
+<p>简化护肤程序，还原女性之美</p>
+<h4>产品配方最简化</h4>
+<p>无色素、无香精、无化学防腐剂</p>
+<p>删减不必要辅料，减轻皮肤负担</p>
+<h4>产品选材最优化</h4>
+<p>精选进口原材料，保障产品功效</p>
+</div>
+</div>
+<!--banner图结束-->
+
+<div class="container yfzj_search">
+<div class="yfzj_search_l">艺霏之家</div>
+<div class="yfzj_search_s">
+<select class="form-control">
+<option>选择省份</option>
+</select>
+<select class="form-control">
+<option>选择省份</option>
+</select>
+<select class="form-control">
+<option>选择省份</option>
+</select>
+</div>
+</div>
+
+<div class="container">
+{ZL.Label id="输出艺霏之家列表_分页" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" ShowNum="15" TitleNum="50" ClassName="col-lg-4 col-md-4 col-sm-4 col-xs-12" /}
+</div>
+
+{ZL.Label id="新版全站底部"/}
+</body>
+</html>
+<script>
+$().ready(function(e) {
+    $("#gid{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}").addClass("active");
+});
+</script>

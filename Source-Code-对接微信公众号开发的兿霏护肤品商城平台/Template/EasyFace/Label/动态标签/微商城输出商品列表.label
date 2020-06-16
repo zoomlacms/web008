@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>295</LabelID>
+    <LabelName>微商城输出商品列表</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>动态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,6,1,显示数|NodeID,1,1,节点ID|TitleNum,30,1,标题长度|SysNum,30,1,简介数|ClassName,col-lg-4 col-md-4 col-sm-4 col-xs-12,1,Class</LabelParam>
+    <LabelTable>ZL_Commodities</LabelTable>
+    <LabelField>ID,LinPrice,Proinfo,Proname,ShiPrice,Thumbnails</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID or NodeID in (select NodeID from ZL_Node where ParentID=@NodeID)) And Sales=1 And istrue=1 And Recycler=0</LabelWhere>
+    <LabelOrder>ZL_Commodities.AddTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;div class="@ClassName"&gt;
+&lt;div class="shang_box"&gt;
+&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}"&gt;&lt;img src="{ZL:GetPicUrl({Field="Thumbnails"/})/}" onerror="javascript:this.src='/UploadFiles/nopic.gif';"  alt="{Field="Proname"/}" /&gt;&lt;/a&gt;
+&lt;p class="shang_jian"&gt;{ZL:CutText({Field="Proinfo"/},@SysNum,)/}&lt;/p&gt;
+&lt;p class="shang_name"&gt;&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}"&gt;{ZL:CutText({Field="Proname"/},@TitleNum,)/}&lt;/a&gt;&lt;/p&gt;
+&lt;div class="shang_box_t"&gt;
+&lt;p&gt;&lt;b&gt;全国统一价：&lt;span&gt;{ZL:GetMoney({Field="LinPrice"/},2,1)/}&lt;/span&gt;元&lt;/b&gt;&lt;/p&gt;
+&lt;div class="row padding10"&gt;
+&lt;div class="col-xs-6 padding5"&gt;
+&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}" class="btn btn-danger btn-block"&gt;查看详情&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="col-xs-6 padding5"&gt;
+&lt;button type="button" class="btn btn-info btn-block" onclick="AddToCart(this,'{Field="ID"/}');"&gt;加入购物车&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+{/Repeate}
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+{ZL.Page id="大图标响应式列表分页v3"/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,85 @@
+{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>专家列表</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<link href="/dist/css/weui.min.css" rel="stylesheet" />
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="{$CssDir/}swiper-3.3.1.min.css" rel="stylesheet" />
+<script src="{$CssDir/}js/swiper-3.3.1.jquery.min.js"></script>
+<script src="{$CssDir/}js/jquery-ui.min.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<style>
+.expert_search { position:relative; padding-left:15px; padding-right:15px; padding-top:10px; padding-bottom:10px; background:#20a7b4; }
+.expert_search .form-control { border-radius:30px;}
+.expert_search .btn { position:absolute; top:10px; right:20px; border:none; background:none;}
+.weui-media-box__title { margin-top:0;}
+.weui-media-box__desc { margin-bottom:0;}
+.expert_list { margin-top:0;}
+.weui-media-box_appmsg .weui-media-box__thumb { max-height:none; height:100%; border-radius:50%;}
+.weui-media-box__hd .btn { background:#20a7b4; border:1px solid #20a7b4; border-radius:30px;}
+.weui-media-box__title span { color:#c00;}
+.weui-media-box__desc span { color:#c00;}
+.expert_alert { margin-top:15px;}
+</style>
+</head>
+<body>
+
+
+<div class="expert_search">
+<form action="/Class_11/NodeNews.aspx" method="get">
+<input type="text" class="form-control" name="k" placeholder="搜索专家" value="{$GetUrldecode({$GetRequest(k)$})$}" />
+<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+</form>
+</div>
+
+<div class="container expert_alert" style="display:none;">
+<div class="alert alert-danger">
+您已绑定专家，点击按钮<a href="/expert.aspx?expid={ZL.Label id="获取当前登录用户绑定专家ID" /}" class="btn btn-info">专家详情</a>可前往查看专家详细信息！
+</div>
+</div>
+<div class="expert_list" style="display:none;">
+{ZL.Label id="输出专家列表_分页" ShowNum="10" KeyWord="{$GetUrldecode({$GetRequest(k)$})$}" /}
+</div>
+
+{ZL.Label id="微信底部"/}
+</body>
+</html>
+<script>
+var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		if(data.TrueName=='') data.TrueName=data.UserName;
+		$(".home_top_l a:nth-child(1)").html("欢迎您，"+data.TrueName+"！");
+		$(".home_top_l a:nth-child(1)").attr("href","/User");
+		$(".home_top_l a:nth-child(2)").hide();
+		$(".home_top_l a:nth-child(3)").show();
+		$(".new_top .media-body h3 a").html("欢迎您，"+data.TrueName+"！").attr("href","/User");
+	}
+	else{
+		$(".home_top_l a:nth-child(3)").hide();
+	}
+});
+$(".weui-media-box__title").each(function(index, element) {
+	$(this).html(String($(this).html()).replace(new RegExp("{$GetUrldecode({$GetRequest(k)$})$}","gm"),"<span>{$GetUrldecode({$GetRequest(k)$})$}</span>"));
+});
+$(".weui-media-box__desc").each(function(index, element) {
+	$(this).html(String($(this).html()).replace(new RegExp("{$GetUrldecode({$GetRequest(k)$})$}","gm"),"<span>{$GetUrldecode({$GetRequest(k)$})$}</span>"));
+});
+$().ready(function(e) {
+    var pid=parseInt("{ZL.Label id="获取当前登录用户绑定专家ID" /}");
+	if(pid>0){
+		$(".expert_alert").show();
+	}
+	else{
+		$(".expert_list").show();
+	}
+});
+</script>

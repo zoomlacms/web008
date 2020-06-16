@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>358</LabelID>
+    <LabelName>微信底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div style="height:52px;"&gt;&lt;/div&gt;
+&lt;div class="wei_bottom1"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/Class_8/Default.aspx"&gt;&lt;i class="fa fa-home"&gt;&lt;/i&gt;首页 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Item/63.aspx"&gt;&lt;i class="fa fa-comments"&gt;&lt;/i&gt;互动&lt;/a&gt;&lt;/li&gt;
+&lt;li id="index"&gt;&lt;a href="/Index"&gt;&lt;i class="fa fa-users"&gt;&lt;/i&gt;艺霏之家&lt;/a&gt;&lt;/li&gt;
+&lt;li id="cart"&gt;&lt;a href="/Cart/Cart.aspx?ProClass=1"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;购物车&lt;/a&gt;&lt;/li&gt;
+&lt;li id="user"&gt;&lt;a href="/User"&gt;&lt;i class="fa fa-user"&gt;&lt;/i&gt;个人中心&lt;/a&gt;&lt;/li&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

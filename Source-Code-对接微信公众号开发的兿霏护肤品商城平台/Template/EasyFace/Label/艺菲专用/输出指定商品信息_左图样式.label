@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>344</LabelID>
+    <LabelName>输出指定商品信息_左图样式</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>艺菲专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>PID,0,1,商品ID</LabelParam>
+    <LabelTable>ZL_Commodities LEFT JOIN ZL_P_Shop ON ZL_Commodities.ItemID=ZL_P_Shop.ID</LabelTable>
+    <LabelField>ZL_Commodities.ProClass,ZL_Commodities.ID,ZL_Commodities.LinPrice,ZL_Commodities.Proinfo,ZL_Commodities.Proname,ZL_Commodities.Thumbnails,ZL_P_Shop.spgg</LabelField>
+    <LabelWhere> ZL_Commodities.ID='@PID'</LabelWhere>
+    <LabelOrder>ZL_Commodities.AddTime DESC</LabelOrder>
+    <LabelContent>&lt;div class="shop_list1"&gt;
+&lt;div class="media"&gt;
+&lt;div class="media-left"&gt;&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}"&gt;&lt;img class="media-object" src="{ZL:GetPicUrl({Field="Thumbnails"/})/}" alt="{Field="Proname"/}" onerror="javascript:this.src='/UploadFiles/nopic.gif';" /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="media-body media-middle"&gt;
+  &lt;h3&gt;&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}"&gt;{Field="Proname"/}&lt;/a&gt;&lt;/h3&gt;
+  &lt;div class="shop_list1_rp1"&gt;规格：{Field="spgg"/}&lt;/div&gt;
+&lt;div class="shop_list1_rp3"&gt;
+&lt;p&gt;&lt;span&gt;￥ {ZL:GetMoney({Field="LinPrice"/},2,1)/}&lt;/span&gt; 统一零售价&lt;/p&gt;
+&lt;button type="button" class="btn btn-danger" onclick="AddToBuy('{Field="ID"/}');"&gt; 立即购买&lt;/button&gt;
+&lt;button type="button" class="btn btn-info" onclick="AddToCart('{Field="ID"/}');"&gt; 加入购物车&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_Commodities","tb_s":"ZL_P_Shop"}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

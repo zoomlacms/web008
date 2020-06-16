@@ -1,0 +1,33 @@
+﻿@using System.Data
+@using ZoomLa.BLL.Helper
+@using ZoomLa.SQLDAL
+@model ZoomLa.SQLDAL.SQL.PageSetting
+@{
+    Model.cols = 3;
+    Model.url = "ConsumeDetail";
+    string SType=Request["SType"];
+}
+<div id="EGV" class="margin_top20">
+<div class="weui-panel">
+@if(SType=="1"){
+<div class="weui-panel__hd">金额变更明细</div>
+}else if(SType=="3"){
+<div class="weui-panel__hd">积分变更明细</div>
+}
+
+<div class="weui-panel__bd">
+    @foreach (DataRow dr in Model.dt.Rows)
+    {
+        <div class="weui-media-box weui-media-box_text">
+        <h4 class="weui-media-box__title">@DataConvert.CDouble(dr["score"]).ToString("f2")</h4>
+        <p class="weui-media-box__desc">@dr["Detail"]</p>
+        <ul class="weui-media-box__info">
+        <li class="weui-media-box__info__meta">@DateHelper.ToDate(dr["HisTime"])</li>
+        </ul>
+        </div>
+    }
+</div>
+</div>
+</div>
+
+

@@ -1,0 +1,157 @@
+﻿@using System.Data
+@using ZoomLa.BLL.Helper
+@using ZoomLa.BLL
+@using ZoomLa.Common
+@using ZoomLa.BLL.Plat
+@using ZoomLa.Model
+@using ZoomLa.SQLDAL
+@model ZoomLaCMS.Models.Bar.VM_PItem
+@functions{
+    B_Plat_Like plikeBll = new B_Plat_Like();
+    B_User userBll = new B_User();
+    public string GetUserFace(int userid)
+    {
+        string result = "onerror=\"javascript: this.src = '/Images/userface/noface.png'; \"";
+        M_UserInfo userMod = userBll.SeachByID(userid);
+        if (userMod != null) { result = userMod.UserFace; }
+        return result;
+    }
+    public string GetUserTureName(int userid)
+    {
+        string result = "匿名用户";
+        if (userid > 0)
+        {
+            M_UserInfo userMod = userBll.SeachByID(userid);
+            if (userMod != null)
+            {
+                if (!string.IsNullOrEmpty(userMod.TrueName)) { result = userMod.TrueName; }
+                else { result = userMod.UserName; }
+            }
+        }
+        return result;
+    }
+    public string GetHasLiked(int postid)
+    {
+        string result = "";
+        M_UserInfo userMod = userBll.GetLogin(false);
+        if (plikeBll.HasLiked(userMod.UserID, postid, "bar"))
+        {
+            result = "active";
+        }
+        return result;
+    }
+    //游客不显示删除与编辑操作
+    public MvcHtmlString GetDel(DataRow dr, int type = 0)
+    {
+        int uid = DataConvert.CLng(dr["CUser"]);
+        int isfirst = Convert.ToInt32(dr["Pid"]) == 0 ? 1 : 2;
+        string result = "";
+        if (((Model.mu.UserID == uid && uid > 0) || Model.auth_barowner) && type == 0)
+        {
+            result = "<a href='/EditContent?ID=" + dr["ID"] + "'><i class='fa fa-edit'></i> 编辑</a><a href='javascript:;' onclick='PostDelMsg(" + dr["ID"] + "," + isfirst + ")'><i class='fa fa-trash-o'></i> 删除</a>";
+        }
+        else if (((Model.mu.UserID == uid && uid > 0) || Model.auth_barowner) && type == 1)
+        {
+            result = "<a href='/EditContent?ID=" + dr["ID"] + "'><i class='fa fa-edit'></i> 编辑</a><a href='javascript:;' onclick='PostDelMsg(" + dr["ID"] + "," + isfirst + ")'><i class='fa fa-trash-o'></i> 删除</a>";
+        }
+        return MvcHtmlString.Create(result);
+    }
+}
+@{
+    B_Blog_Msg msgBll = new B_Blog_Msg();
+    Model.setting.cols = 10;
+    Model.setting.url = "PItem?id=" + Model.barMod.ID;
+}
+<div id="EGV">
+@foreach (DataRow dr in Model.setting.dt.Rows)
+{
+if(Model.HidePost){}
+else
+{
+<div id="msgmain_div_@Model.barMod.ID">
+<div class="msg_content_div">
+
+
+@if(DataConverter.CLng(dr["Pid"]) == 0)
+{
+<div class="index_cuser">
+<div class="media">
+<div class="media-left media-middle"><a href="@Model.GetHref(dr)"><img class="media-object" src="@dr["UserFace"]" alt="@dr["CUName"]" onerror="shownoface(this);" /></a></div>
+<div class="media-body media-middle">
+<h4 class="media-heading"><a href="#">@GetUserTureName(DataConvert.CLng(dr["Cuser"]))</a></h4>
+<p><i class="fa fa-clock-o"></i> @DataConvert.CDate(@dr["CDate"].ToString()).ToString("yyyy-MM-dd HH:mm:ss")</p>
+</div>
+<div class="media-right media-middle"><i class="fa fa-eye"></i>@dr["HitCount"]</div>
+</div>
+</div>
+
+<div class="index_cont">@Model.GetMsg(dr)</div>
+
+<div class="index_clike" id="like_div_@dr["id"]">
+<a href="javascript:;" onclick="OPLike(@dr["id"]);"><i class="fa fa-thumbs-up @GetHasLiked(DataConvert.CLng(dr["ID"]))"></i> <span class="likenum_text">@Model.GetLikeNum(dr)</span></a>
+<a href="javascript:;" onclick="showActionSheet('@dr["ID"]',this);" data-like="@dr["ColledIDS"]" id="myIndex_list_cmba_@dr["ID"]"><i class="fa fa-ellipsis-h"></i></a>
+@GetDel(dr)
+
+<div class="index_clike_l">
+<ul class="likeids_div_ul" hidden>
+@Model.GetMedalBtn(dr)
+@Model.ShowLikeUser(dr)
+</ul>
+</div>
+</div>
+
+<div class="index_reply_t">@(Model.setting.dt.Rows.Count-1) 条评论</div>
+}
+else
+{
+<div class="index_reply_c">
+<div class="media">
+<div class="media-left"><a href="@Model.GetHref(dr)"><img class="media-object" src="@dr["UserFace"]" alt="@dr["CUName"]" onerror="shownoface(this);" /></a></div>
+<div class="media-body media-middle">
+<h4 class="media-heading"><a href="#">@GetUserTureName(DataConvert.CLng(dr["Cuser"]))</a></h4>
+<p>@Model.GetMsg(dr)</p>
+<p><i class="fa fa-clock-o"></i> @DataConvert.CDate(@dr["CDate"].ToString()).ToString("yyyy-MM-dd HH:mm:ss")</p>
+
+<div id='reply_@dr["ID"]' class="post_reply">
+<div id="reply_content_div_@dr["id"]">
+@Html.Action("PostReply", new { pid = dr["id"] })
+</div>
+<div class="post_reply_msg" id="reply_main_bottom_@dr["id"]">
+@if(!Model.HidePost)
+{
+<div style="display: none;" id="reply_bottom_ul_@dr["id"]">
+<textarea id="reply_ul_txt_@dr["id"]" class="form-control input-sm" placeholder="说一句吧..." style="margin-top:5px; margin-bottom:5px;" rows="2"></textarea>
+<div class="reply_send"><button type="button" class="btn btn-sm btn-block btn-primary" onclick="AddMessage(@dr["id"]);" >发表</button></div>
+</div>
+}
+</div>
+</div>
+
+</div>
+<div class="media-right">
+<div style="white-space:nowrap; text-align:center;">
+@dr["RowNum"]楼<br/>
+<a href="javascript:;" data-id="@dr["id"]" onclick="DisReplyul(@dr["ID"]);"><i class="fa fa-comments"></i></a>
+</div>
+</div>
+
+</div>
+
+</div>
+}
+
+
+<div class="post_msg_foot">
+<div id="medals_div_@dr["id"]" class="medal_list">
+@Model.ShowMedalList(dr)
+</div>
+</div>
+</div>
+</div>
+}
+}
+@if(Model.setting.pageCount>1)
+{
+@Html.Partial("_page2",Model.setting)
+}
+</div>

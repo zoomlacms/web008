@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>371</LabelID>
+    <LabelName>获取指定专家详情</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>艺菲专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>expid,,2,专家ID</LabelParam>
+    <LabelTable>ZL_C_zjmx</LabelTable>
+    <LabelField>content</LabelField>
+    <LabelWhere> ZL_C_zjmx.expuserid='{$GetRequest(expid)$}'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="content"/}</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_C_zjmx","tb_s":""}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

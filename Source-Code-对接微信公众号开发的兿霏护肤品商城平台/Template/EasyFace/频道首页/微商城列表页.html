@@ -1,0 +1,219 @@
+{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>产品中心</title>
+  <!--<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>-->
+
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<link href="/dist/css/weui.min.css" rel="stylesheet" />
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="{$CssDir/}swiper-3.3.1.min.css" rel="stylesheet" />
+<script src="{$CssDir/}js/swiper-3.3.1.jquery.min.js"></script>
+<script src="{$CssDir/}js/jquery-ui.min.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<style>
+.top-img { position: absolute; }
+.swiper-container { width: 100%; background: #fff; }
+.swiper-slide { display: block; width: 100%; margin-right: 0px; padding-top: 56.5%; background-repeat: no-repeat; background-size: cover; background-position: center; /* Center slide text vertically */ display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+.swiper-slide a { display: block; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; }
+.swiper-pagination-bullet { width: 8px; height: 2px; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; /*box-shadow: rgba(0,0,0,.5) 0 0 7px;*/ }
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet { margin: 0 3px; }
+.pro_pic img { width:100%;}
+</style>
+</head>
+<body>
+<div class="hidden-xs" hidden>{ZL.Label id="新版全站头部"/}</div>
+
+<div class="visible-xs" >
+<div class="new_top" hidden>
+<div class="media">
+<div class="media-left media-middle"><a href="/Class_8/Default.aspx"><img src="/Template/EasyFace/style/images/logo_w.svg" alt="EasyFace" /></a></div>
+<div class="media-body"><h3><a href="/User/Login">登录</a></h3><p><img src="/Template/EasyFace/style/images/hometop_pic1.png" alt="EasyFace" /> 简单护肤，护肤可以很简单</p></div>
+</div>
+</div>
+</div>
+
+<div class="shang_banner hidden-xs"></div>
+
+<div class="visible-xs">
+<div class="container margin_top15 padding0_xs">
+<div class="pro_pic">
+<img src="{$CssDir/}images/pro_list.png" alt="{$SiteName/}" />
+</div>
+{ZL.Label id="输出指定商品信息_左图样式" PID="1" /}
+{ZL.Label id="输出指定商品信息_左图样式" PID="2" /}
+{ZL.Label id="输出指定商品信息_左图样式" PID="3" /}
+</div>
+</div>
+
+<div class="container hidden">
+<div class="shang_cont_t hidden-xs">{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</div>
+{ZL.Label id="输出指定商品信息_左图样式" PID="1" /}
+{ZL.Label id="输出指定商品信息_上图样式" PID="2" /}
+{ZL.Label id="输出指定商品信息_右图样式" PID="3" /}
+</div>
+<div class="mobile_cart"><a href="/Cart/Cart.aspx?ProClass=1"><i class="fa fa-shopping-cart"></i></a></div>
+<div class="hidden-xs">{ZL.Label id="新版全站底部"/}</div>
+<div class="visible-xs">
+{ZL.Label id="微信底部"/}
+</div>
+
+</body>
+</html>
+<script>
+var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+//buser.IsLogged(function(data,flag){
+// if(flag)
+//	{
+//		data=JSON.parse(data);
+//		if(data.TrueName=='') data.TrueName=data.UserName;
+//		$(".home_top_l a:nth-child(1)").html("欢迎您，"+data.TrueName+"！");
+//		$(".home_top_l a:nth-child(1)").attr("href","/User");
+//		$(".home_top_l a:nth-child(2)").hide();
+//		$(".home_top_l a:nth-child(3)").show();
+//		$(".new_top .media-body h3 a").html("欢迎您，"+data.TrueName+"！").attr("href","/User");
+//	}
+//	else{
+//		$(".home_top_l a:nth-child(3)").hide();
+//	}
+//});*
+function AddCartC1()
+{
+	var pronum=$("#Pronum1").val();
+	$.post("/Cart/Cart.aspx?ID="+$("#proid").val()+"&Pronum="+pronum);
+	alert("加入购物车成功！");
+	$("#actionSheet_wrap").hide();
+}
+$("#actionsheet_cancel").click(function(){
+	$("#actionSheet_wrap").hide();
+})
+/*商品加减*/
+$.fn.iVaryVal=function(iSet){
+	iSet=$.extend({Minus:$('.J_minus'),Add:$('.J_add'),Input:$('.J_input'),Min:1,Max:100,Fun:null},iSet);
+	var C=null,O=null;
+	//输出值全局对象[若担心全局对象污染，可定义一个hidden表单，向其传值]
+	$GLOBAL={};
+	//增加
+	iSet.Add.each(function(i){
+		$(this).click(function(){
+			O=parseInt(iSet.Input.eq(i).val());
+			(O+1<=iSet.Max) || (iSet.Max==null) ? iSet.Input.eq(i).val(O+1) : iSet.Input.eq(i).val(iSet.Max);
+			//输出当前改变后的值
+			$GLOBAL.val=iSet.Input.eq(i).val();
+			$GLOBAL.index=i;
+			//回调函数
+			if (typeof iSet.Fun == 'function') {
+				iSet.Fun.call(this);
+			}
+		});
+	});
+	//减少
+	iSet.Minus.each(function(i){
+		$(this).click(function(){
+			O=parseInt(iSet.Input.eq(i).val());
+			O-1<iSet.Min ? iSet.Input.eq(i).val(iSet.Min) : iSet.Input.eq(i).val(O-1);
+			$GLOBAL.val=iSet.Input.eq(i).val();
+			$GLOBAL.index=i;
+			//回调函数
+			if (typeof iSet.Fun == 'function'){
+				iSet.Fun.call(this);
+			}
+		});
+	});
+	//手动
+	iSet.Input.bind({
+		'click':function(){
+			O=parseInt($(this).val());
+			$(this).select();
+		},
+		'keyup':function(e){
+			if($(this).val()!=''){
+				C=parseInt($(this).val());
+				//非负整数判断
+				if(/^[1-9]\d*|0$/.test(C)){
+					$(this).val(C);
+					O=C;
+				}
+				else{
+					$(this).val(O);
+				}
+			}
+			//键盘控制：上右--加，下左--减
+			if(e.keyCode==38 || e.keyCode==39){
+				iSet.Add.eq(iSet.Input.index(this)).click();
+			}
+			if(e.keyCode==37 || e.keyCode==40){
+				iSet.Minus.eq(iSet.Input.index(this)).click();
+			}
+			//输出当前改变后的值
+			$GLOBAL.val=$(this).val();
+			$GLOBAL.index=iSet.Input.index(this);
+			//回调函数
+			if (typeof iSet.Fun == 'function') {
+				iSet.Fun.call(this);
+			}
+		},
+		'blur':function(){
+			$(this).trigger('keyup');
+			if($(this).val()==''){
+				$(this).val(O);
+			}
+			//判断输入值是否超出最大最小值
+			if(iSet.Max){
+				if(O>iSet.Max){
+					$(this).val(iSet.Max);
+				}
+			}
+			if(O<iSet.Min){
+				$(this).val(iSet.Min);
+			}
+			//输出当前改变后的值
+			$GLOBAL.val=$(this).val();
+			$GLOBAL.index=iSet.Input.index(this);
+			//回调函数
+			if (typeof iSet.Fun == 'function') {
+				iSet.Fun.call(this);
+			}
+		}
+	});
+}
+$( function() {
+	$('.i_box').iVaryVal({Fun:function(){ }});
+});
+function AddBuy()
+{
+	form2.submit();
+}
+function AddToCart(proid)
+{
+	var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+	buser.IsLogged(function(data,flag){
+		if(flag)
+		{
+			$.post("/Cart/Cart.aspx?ID="+proid+"&Pronum=1");
+			alert("加入购物车成功！")
+		}
+		else alert("加入购物车失败！");
+	});
+}
+function AddToBuy(proid)
+{
+	var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+	buser.IsLogged(function(data,flag){
+		if(flag)
+		{
+			$.post("/Cart/Cart.aspx?ID="+proid+"&Pronum=1");
+			window.location.href="/Cart/Cart.aspx?ProClass=1";
+		}
+		else
+		{
+			window.location.href="/User/Login.aspx?ReturnUrl=/Class_9/Default.aspx";
+		}
+	});
+}
+</script>

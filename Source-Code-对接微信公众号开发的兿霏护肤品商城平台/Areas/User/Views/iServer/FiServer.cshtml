@@ -1,0 +1,182 @@
+﻿@using System.Data
+@using System.Data.SqlClient;
+@using ZoomLa.BLL
+@using ZoomLa.BLL.Helper
+@using ZoomLa.Common
+@using ZoomLa.Model
+@using ZoomLa.SQLDAL;
+@functions{
+    B_User buser = new B_User();
+    string[] typeArray = { "", "咨询", "投诉", "建议", "要求", "界面使用", "bug报告", "订单", "财务", "域名", "主机", "邮局", "DNS", "MSSQL", "MySQL", "IDC", "网站推广", "网站制作", "其它" };
+    protected int returnType(object typeName)
+    {
+        int index = 0;
+        for (int i = 0; i < typeArray.Length; i++)
+        {
+            if (typeName.ToString().Trim() == typeArray[i])
+            {
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
+    public DataTable SeachTop(string state, int userid, string type = "", int orderid = 0)
+    {
+        M_UserInfo mu = buser.GetUserByUserID(userid);
+        string sql = "SELECT TOP 5 * FROM ZL_IServer WHERE 1=1";
+        List<SqlParameter> sp = new List<SqlParameter>();
+        if (!string.IsNullOrEmpty(state)) { sql += " AND State=@state"; sp.Add(new SqlParameter("state", state)); }
+        if (userid > 0)
+        {
+            if (mu != null && !string.IsNullOrEmpty(mu.TrueName))
+            {
+                sql += " AND (UserID=" + userid + " or Title like '%" + mu.TrueName + "%')";
+            }
+            else
+            {
+                sql += " AND UserID=" + userid;
+            }
+        }
+        if (!string.IsNullOrEmpty(type)) { sql += " AND Type=@type"; sp.Add(new SqlParameter("type", type)); }
+        if (orderid > 0) { sql += " AND OrderType=" + orderid; }
+        sql += " ORDER BY SubTime DESC";
+
+        return SqlHelper.ExecuteTable(CommandType.Text, sql, sp.ToArray());
+    }
+    private string GetState(int num)
+    {
+        string state = "";
+        switch (num)
+        {
+            case 1: state = "未解决"; break;
+            case 2: state = "处理中"; break;
+            case 3: state = "已解决"; break;
+            case 4: state = "已锁定"; break;
+            default: state = ""; break;
+        }
+        return state;
+    }
+}
+@{
+    B_User buser = new B_User();
+    B_IServer isBll = new B_IServer();
+    int Type = DataConverter.CLng(Request.QueryString["type"]);
+    string state = GetState(DataConverter.CLng(Request.QueryString["num"]));
+    int tab = DataConverter.CLng(Request["num"]);
+    DataTable topdt = SeachTop(state, buser.GetLogin().UserID, isBll.TypeArr[Type]);
+}
+@section head{<title>有问必答</title>}
+@section content{
+<div class="nuser_top">
+<p>有问必答</p>
+</div>
+<div class="container padding0_xs">
+<ol class="breadcrumb">
+<li><a title="会员中心" href="/User/Default">会员中心</a></li>
+<li class="active">有问必答</li>
+</ol>
+</div>
+<div class="container padding0_xs">
+
+<table class="table table-striped table-bordered table-hover">
+<tr><td colspan="2" class="title" style="text-align: center">有问必答</td></tr>
+<tr align="left" class="tdbg">
+<td width="100"><a href="SelectiServer"><b>全部:</b></a></td>
+<td>
+<a href="SelectiServer" class="btn btn-default" title="浏览">@ViewBag.allnum</a>
+@*<div id="typeList" class="btn-group" style="margin-left:100px;">
+@foreach (DataRow dr in ((DataTable)ViewBag.typedt).Rows)
+{
+<a name="type" href='SelectiServer?type=@returnType(dr["type"].ToString())' target="_self">@dr["type"]</a>
+}
+<a href="SelectiServer" target="_self">All&gt;&gt;</a>
+</div>*@
+</td>
+</tr>
+<tr align="left" >
+<td>
+<a href="SelectiServer?num=1"><font color="red">未解决:</font></a>
+</td>
+<td>
+<a href="SelectiServer?num=1" class="btn btn-default" title="浏览">@ViewBag.nrslvnum</a>
+</td>
+</tr>
+<tr >
+<td>
+<a href="SelectiServer?num=2"><font color="brown">处理中:</font></a>
+</td>
+<td>
+<a href="SelectiServer?num=2" class="btn btn-default" title="浏览">@ViewBag.treatnum</a>
+</td>
+</tr>
+<tr >
+<td>
+<a href="SelectiServer?num=3"><font color="green">已解决:</font></a>
+</td>
+<td>
+<a href="SelectiServer?num=3" class="btn btn-default" title="浏览">@ViewBag.rslvnum</a>
+</td>
+</tr>
+<tr >
+<td>
+<a href="SelectiServer?num=4"><font color="gray">已锁定:</font></a>
+</td>
+<td>
+<a href="SelectiServer?num=4" class="btn btn-default" title="浏览">@ViewBag.socknum</a>
+</td>
+</tr>
+</table>
+<!-- Nav tabs -->
+<table class="table table-striped table-bordered">
+<tr>
+<td>
+<ul class="nav nav-tabs" style="height:42px;">
+<li data-tab="1"><a href="FiServer?num=1">待解决</a></li>
+<li data-tab="2"><a href="FiServer?num=2">处理中</a></li>
+<li data-tab="3"><a href="FiServer?num=3" role="tab">已解决</a></li>
+<li data-tab="0"><a href="FiServer" role="tab">所有</a></li>
+</ul>
+<a href="AddQuestion" class="btn btn-info btn-block" style="margin-top:10px; margin-bottom:10px;"><i class="fa fa-plus"></i> 提交新问题</a>
+
+<table class="table table-striped table-bordered table-hover">
+@if (((DataTable)topdt).Rows.Count > 0)
+{
+foreach (DataRow dr in ((DataTable)topdt).Rows)
+{
+<tr>
+<td>
+编号：@dr["QuestionId"]<br/>
+标题：<a href="FiServerInfo?ID=@dr["QuestionId"]">@ZoomLa.Common.BaseClass.Htmlcode(@dr["Title"].ToString())<a><br/>
+优先级：@dr["Priority"]<br/>
+问题类型：<a href='SelectiServer?type=@returnType(dr["type"].ToString())' target="_self">@dr["type"]</a><br/>
+已读次数：@dr["ReadCount"]<br/>
+提交时间：@dr["SubTime"]<br/>
+状态：@dr["State"]
+</td>
+</tr>
+}
+}
+else
+{
+<tr><td colspan="7">当前没有问题</td></tr>
+}
+</table>
+</td>
+</tr>
+</table>
+</div>
+}
+@section script{
+<script type="text/javascript">
+$(function () {
+	var num = $("#typeList").find("a[name='type']").length;
+	if (parseInt(num) == 0) { $("#typeList").hide(); }
+	$(".nav li[data-tab=@tab]").addClass("active");
+	   
+});
+function seach() {
+	location.href = 'SelectiServer?num=-1&menu=@Request.QueryString["menu"]&strTitle=' + $("#skey_t").val();
+}
+</script>
+}

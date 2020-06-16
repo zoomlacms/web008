@@ -1,0 +1,78 @@
+﻿{ZL.Source id="文章模型数据源标签"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="文章模型数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="文章模型数据源标签" FD="Tagkey" page="0"/}" />
+<meta name="Description" content="{SField sid="文章模型数据源标签" FD="Title" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=891134d8e2d66c2dd6b4b08da9555ca5"></script>
+<style>
+.footer_top { border-top:1px solid #b7b7b7;}
+</style>
+</head>
+<body>
+{ZL.Label id="新版全站头部"/}
+<div class="home_banner">
+<div>
+<h4>护肤程序最简化</h4>
+<p>简化护肤程序，还原女性之美</p>
+<h4>产品配方最简化</h4>
+<p>无色素、无香精、无化学防腐剂</p>
+<p>删减不必要辅料，减轻皮肤负担</p>
+<h4>产品选材最优化</h4>
+<p>精选进口原材料，保障产品功效</p>
+</div>
+</div>
+<!--banner图结束-->
+<div hidden><SCRIPT language=javascript src="/Common/GetHits.aspx?id={SField sid="文章模型数据源标签" FD="GeneralID" page="0"/}"></SCRIPT></div>
+<div class="about_touch">
+<div class="container">
+<h2>联系方式</h2>
+<h3>上海一非医药科技有限公司</h3>
+<p><span>联系人：张先生</span><span>地址：上海市闵行区春申路1985弄15号6幢423室</span></p>
+<p><span>电话：86-21-64149631</span><span>传真：86-21-64149623</span><span>邮箱：wenxian@easyface.cn</span></p>
+</div>
+</div>
+<div class="container">
+<div id="allmap"></div>
+</div>
+{ZL.Label id="新版全站底部"/}
+</body>
+</html>
+<script>
+var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		$(".home_top_l a:nth-child(1)").html("欢迎您，"+data.UserName);
+		$(".home_top_l a:nth-child(1)").attr("href","/User");
+		$(".home_top_l a:nth-child(2)").hide();
+		$(".home_top_l a:nth-child(3)").show();
+	}
+	else{
+		$(".home_top_l a:nth-child(3)").hide();
+	}
+});
+function LogoutFun()
+{
+	buser.Logout(function(){location=location;});
+}
+var map = new BMap.Map("allmap");
+map.centerAndZoom(new BMap.Point(121.520494,31.081779), 20);
+var marker1 = new BMap.Marker(new BMap.Point(121.429961,31.118025));  // 创建标注
+map.addOverlay(marker1);              // 将标注添加到地图中
+var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+map.addControl(ctrl_nav);
+var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+map.addControl(ctrl_sca);
+map.enableScrollWheelZoom();
+//创建信息窗口
+var infoWindow1 = new BMap.InfoWindow("上海市闵行区春申路1985弄15号6幢423室");
+marker1.addEventListener("click", function(){ this.openInfoWindow(infoWindow1);});
+marker1.openInfoWindow(infoWindow1);
+</script>

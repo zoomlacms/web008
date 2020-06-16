@@ -1,0 +1,91 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>294</LabelID>
+    <LabelName>全站底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>艺菲专用</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="home_footer"&gt;
+&lt;div class="container"&gt;
+&lt;div class="foot_topt"&gt;&lt;a href="#"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt;关于颜敷贴&lt;/a&gt;&lt;/div&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-lg-3 col-md-3 col-sm-3 col-xs-4"&gt;
+&lt;ul class="foot_lbox"&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(27)/}"&gt;产品理念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(28)/}"&gt;品牌文化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(29)/}"&gt;质量保证&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(30)/}"&gt;明星视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(31)/}"&gt;包装展示&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"&gt;
+&lt;ul class="foot_lbox"&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(32)/}"&gt;适用人群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(33)/}"&gt;使用说明&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(34)/}"&gt;购买渠道&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"&gt;
+&lt;ul class="foot_lbox"&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(27)/}"&gt;产品理念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(28)/}"&gt;品牌文化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(29)/}"&gt;质量保证&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(34)/}"&gt;购买渠道&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetNodeLinkUrl(9)/}"&gt;电商特惠&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-3 col-md-3 col-sm-3 col-xs-6"&gt;
+&lt;ul class="foot_lbox"&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(27)/}"&gt;产品理念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(28)/}"&gt;品牌文化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(29)/}"&gt;质量保证&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(34)/}"&gt;购买渠道&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetNodeLinkUrl(9)/}"&gt;电商特惠&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-6"&gt;
+&lt;ul class="foot_lbox"&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(1)/}"&gt;公司信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(2)/}"&gt;版权声明&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(13)/}"&gt;联系官方&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/guest/" target="_blank"&gt;客户留言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href="http://weibo.com/88888888/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo&amp;is_all=1" target="_blank"&gt;&lt;i class="fa fa-weibo"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href="http://wpa.qq.com/msgrd?v=3&amp;uin=371194375&amp;site=qq&amp;menu=yes" target="_blank"&gt;&lt;i class="fa fa-qq"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="home_copy"&gt;{$Copyright/}&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="kefu"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="tel:021-64149631"&gt;&lt;span&gt;联系我们&lt;/span&gt;&lt;i class="fa fa-phone"&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wpa.qq.com/msgrd?v=3&amp;uin=371194375&amp;site=qq&amp;menu=yes" target="_blank"&gt;&lt;span&gt;在线客服&lt;/span&gt;&lt;i class="fa  fa-qq"&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="kefu_qrcode"&gt;&lt;a href="javascript:;"&gt;&lt;span&gt;&lt;img src="{$CssDir/}images/weixin_code.jpg" width="155" alt="微信二维码" /&gt;&lt;/span&gt;&lt;i class="fa fa-qrcode"&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Guest/Default.aspx?CateID=1" target="_blank"&gt;&lt;span&gt;留言咨询&lt;/span&gt;&lt;i class="fa fa-pencil"&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

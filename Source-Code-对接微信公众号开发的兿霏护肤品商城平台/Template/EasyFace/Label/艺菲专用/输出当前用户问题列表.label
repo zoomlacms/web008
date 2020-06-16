@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>328</LabelID>
+    <LabelName>输出当前用户问题列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>艺菲专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,10,1,显示数</LabelParam>
+    <LabelTable>ZL_Ask</LabelTable>
+    <LabelField>AddTime,ID,Qcontent,UserId</LabelField>
+    <LabelWhere>UserId='{ZL:GetuserID()/}' And Status=1</LabelWhere>
+    <LabelOrder>ZL_Ask.AddTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;&lt;a href="/Guest/Ask/Interactive.aspx?ID={Field="ID"/}"&gt;&lt;i class="fa fa-question-circle"&gt;&lt;/i&gt; {Field="Qcontent"/}&lt;/a&gt;&lt;span class="pull-right"&gt;{ZL:FormatDate({Field="AddTime"/},MM-dd)/}&lt;/span&gt;&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

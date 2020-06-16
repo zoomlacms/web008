@@ -1,0 +1,170 @@
+﻿@using ZoomLa.Model;
+@using ZoomLa.BLL;
+@using ZoomLa.Model.User;
+@using ZoomLa.SQLDAL;
+@{
+    Layout = "~/Areas/User/Views/Shared/_layout.cshtml";
+    M_UserInfo mu = ViewBag.mu;
+    M_Uinfo basemu = ViewBag.basemu;
+    int step = DataConvert.CLng(ViewBag.step);
+    M_Group groupMod = new M_Group();
+    B_Group groupBll = new B_Group();
+    groupMod = groupBll.SelReturnModel(mu.GroupID);
+}
+@section head{
+<title>修改手机</title>
+<style>
+.weui-cells { font-size:16px;}
+label { font-weight:500; margin-bottom:0;}
+</style>
+}
+@section content{
+<div id="pageflag" data-nav="group" data-ban="ChangeMP"></div>
+<div class="container margin_t5" hidden>
+    <ol class="breadcrumb">
+        <li><a title="会员中心" href="/User/Default">会员中心</a></li>
+        <li><a title="用户信息" href="/User/Info/UserInfo">用户信息</a></li>
+        <li class="active">修改手机</li>
+    </ol>
+</div>
+<div class="muser_top">
+<div class="container">
+<div class="media">
+<div class="media-left"><a href="/User/Info/UserBase"><img src="@mu.UserFace" alt="@mu.UserName" onerror="javascript:this.src='/Images/userface/noface.png';" /></a></div>
+<div class="media-body media-middle">
+<p class="muser_p"><span>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"获取当前登录用户真实姓名\"/}"))</span><span><span>@groupMod.GroupName</span></span><a href="/wxshare.aspx" id="wxshare">我的二维码</a></p>
+<h4>上次登陆时间：@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"获取当前登录用户上次登录时间\"/}")) </h4>
+<p><a href="/User/Info/UserBase"> 账号管理 </a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="container muser_info padding0_xs">
+<div role="tabpanel">
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation"><a href="/User/Info/UserBase">基本资料</a></li>
+<li role="presentation"><a href="/User/Change/Pwd">修改密码</a></li>
+<li role="presentation" class="active"><a href="/User/Change/Mobile">手机绑定</a></li>
+<li role="presentation"><a href="/User/Info/UserRecei">我的地址</a></li>
+</ul>
+</div>
+</div>
+<div class="container btn_green padding0_xs">
+@{
+    if (step == 1 || step == 0)
+    {
+<form method="post" action="/User/Change/Mobile_1">
+<div id="step1_div">
+<div class="weui-cells weui-cells__form margin_top0">
+<div class="weui-cell">
+<div class="weui-cell__hd"><label class="weui-label">原手机</label></div>
+<div class="weui-cell__bd"><input class="weui-input" type="tel" disabled="disabled" value="@basemu.Mobile" id="SMobile_T"/></div>
+</div>
+<div class="weui-cell">
+<div class="weui-cell__hd"><label class="weui-label">验证码</label></div>
+<div class="weui-cell__bd">
+<input type="hidden" id="VCode_hid" name="VCode_hid" />
+<input class="weui-input" maxlength="6" placeholder="验证码" id="VCode" name="VCode" />
+</div>
+<div class="weui-cell__ft">
+<img id="VCode_img" class="codeimg" title="点击刷新验证码" />
+</div>
+</div>
+<div class="weui-cell"><input type="button" id="SendCode_Btn" class="weui-btn weui-btn_primary" value="发送校验码" onclick="getvcode(this);" /></div>
+<div class="weui-cell">
+<div class="weui-cell__hd"><label class="weui-label">校验码</label></div>
+<div class="weui-cell__bd">
+<input type="hidden" id="VCode_hid" name="VCode_hid" />
+<input class="weui-input" placeholder="请输入校验码" id="CheckNum_T" name="CheckNum_T" />
+</div>
+</div>
+</div>
+<button type="submit" id="Next_Btn" class="weui-btn weui-btn_primary margin_top20">下一步</button>
+
+ @*onclick="Next_Btn_Click"*@
+
+</div>
+</form>
+    }
+    else if (step == 2)
+    {
+<form method="post" action="/User/Change/Mobile_2">
+<div id="step2_div">
+<div class="weui-cells weui-cells__form margin_top0">
+<div class="weui-cell">
+<div class="weui-cell__hd"><label class="weui-label">手机号</label></div>
+<div class="weui-cell__bd"><input class="weui-input" type="tel" placeholder="请输入手机号" value="@ViewBag.newmoblie" id="NewMobile_T" name="NewMobile_T"/></div>
+</div>
+<div class="weui-cell">
+<div class="weui-cell__hd"><label class="weui-label">验证码</label></div>
+<div class="weui-cell__bd">
+<input type="hidden" id="VCode_hid" name="VCode_hid" />
+<input class="weui-input" maxlength="6" placeholder="验证码" id="VCode" name="VCode" />
+</div>
+<div class="weui-cell__ft">
+<img id="VCode_img" class="codeimg" title="点击刷新验证码" />
+</div>
+</div>
+<div class="weui-cell"><input type="button" id="SendCode_Btn" class="weui-btn weui-btn_primary" value="发送校验码" onclick="getvcode(this,2);" /></div>
+<div class="weui-cell">
+<div class="weui-cell__hd"><label class="weui-label">校验码</label></div>
+<div class="weui-cell__bd">
+<input type="hidden" id="VCode_hid" name="VCode_hid" />
+<input class="weui-input" placeholder="请输入校验码" id="NewCheckNum_T" name="NewCheckNum_T" />
+</div>
+</div>
+</div>
+<button type="submit" id="submit_btn" disabled="disabled" class="weui-btn weui-btn_primary margin_top20">提交</button>
+</div>
+</form>
+    }
+}
+    @if(!string.IsNullOrEmpty(ViewBag.info as string)) { <div class="alert alert-info" id="Remind_Div" style="margin-top:0px;margin-bottom:5px;">@ViewBag.info</div> }
+</div>
+}
+@section script{
+<script src="/JS/ZL_ValidateCode.js"></script>
+<script src="/JS/Controls/Control.js"></script>
+<script>
+$().ready(function(e) {
+	$("#wxshare").hide();
+    var gid='@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"获取当前登录用户会员组ID\"/}"))';
+    if(gid=="3") $("#wxshare").show();
+});
+$(function () {
+    $("#VCode").ValidateCode({ submitchk: false });
+    $("#NewVCode").ValidateCode({ submitchk: false });
+    //var vaild = $("form").validate({ meta: "validate" });
+    validate.zl_init($("form"), { meta: "validate" });
+    $("#VCode,#NewMobile_T").focus(function () { $(this).tooltip("destroy"); console.log('11'); })
+})
+function getvcode(obj,step) {
+    var info = { key: "", vcode: "", mobile: "" };
+    info.key = $("#VCode_hid").val();
+    info.vcode = $("#VCode").val();
+    if (step == 2) {
+        info.mobile = $("#NewMobile_T").val();
+        if (info.mobile == undefined || info.mobile == '') {
+            $("#NewMobile_T").tooltip({ placement: "right", trigger: 'manual', title: "请输入手机号码" }).tooltip('show');
+            return;
+        }
+    }
+    if (info.vcode == undefined || info.vcode == '') { $("#VCode").tooltip({ placement: "right", trigger: 'manual', title: "请填写验证码" }).tooltip('show'); return; }
+    $("#NewMobile_T").tooltip('hide');
+    $("#VCode").tooltip('hide');
+    Control.btn.wait(obj, 60);
+    console.log(info)
+    $.post("/User/Change/SendValidCode", info, function (data) {
+        APIResult.ifok(data, function (result) {
+            $("#Remind_Div").html("发送成功");
+            $("#submit_btn").removeAttr("disabled");
+        }, function (data) {
+            var model = APIResult.getModel(data);
+            $("#Remind_Div").html(model.retmsg);
+            Control.btn.wait_clear();
+        });
+    });
+}
+</script>
+}

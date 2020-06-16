@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>339</LabelID>
+    <LabelName>获取指定会员消费列表_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>艺菲专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>UserID,,1,会员ID|ShowNum,10,1,显示数</LabelParam>
+    <LabelTable>ZL_Orderinfo</LabelTable>
+    <LabelField>AddTime,ID,Ordersamount</LabelField>
+    <LabelWhere>Paymentstatus=1 And Userid='@UserID'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>&lt;tr&gt;
+&lt;th&gt;订单ID&lt;/th&gt;
+&lt;th&gt;消费日期&lt;/th&gt;
+&lt;th&gt;消费金额&lt;/th&gt;
+&lt;/tr&gt;
+{Repeate}
+&lt;tr&gt;
+&lt;td&gt;{Field="ID"/}&lt;/td&gt;
+&lt;td&gt;{ZL:FormatDate({Field="AddTime"/},yyyy-MM-dd)/}&lt;/td&gt;
+&lt;td&gt;{ZL:GetMoney({Field="Ordersamount"/},2,1)/}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan="3"&gt;{ZL.Page id="大图标响应式列表分页"/}&lt;/td&gt;&lt;/tr&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

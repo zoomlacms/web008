@@ -1,0 +1,26 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>关注我们</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<style>
+body { position:absolute; left:0; top:0; right:0; bottom:0;}
+.wxbind_body { background:#333;} /*微信绑定*/
+.wxbind_body_c { position:absolute; top:50%; left:50%; -webkit-transform:translate(-50%,-50%); transform:translate(-50%,-50%); color:#fff; font-family:"STHeiti","Microsoft YaHei","黑体","arial";}
+.wxbind_body_c h1 { margin-top:0; margin-bottom:20px; font-size:1.5em; text-align:center;}
+.wxbind_body_c img { background:#fff;}
+.wxbind_body_c p { margin-top:20px; margin-bottom:0; padding-top:5px; padding-bottom:5px; text-align:center; background:#232323; border-radius:100px; box-shadow:inset 0 5px 10px -5px #191919,0 1px 0 0 #444; -moz-box-shadow:inset 0 5px 10px -5px #191919,0 1px 0 0 #444; -webkit-box-shadow:inset 0 5px 10px -5px #191919,0 1px 0 0 #444; line-height:1.5em;}
+</style>
+</head>
+<body class="wxbind_body">
+<div class="wxbind_body_c">
+<h1>关注我们</h1>
+<img src="{$Banner/}" id="bind_img" alt="微信二维码" width="280" height="280" />
+<p>需要先关注才能访问<br>请长按或扫码识别二维码关注<br>{$SiteName/}</p>
+</div>
+</body>
+</html>

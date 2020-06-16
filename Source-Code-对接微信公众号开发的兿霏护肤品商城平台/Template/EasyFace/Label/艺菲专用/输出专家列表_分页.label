@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>369</LabelID>
+    <LabelName>输出专家列表_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>艺菲专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,10,1,显示数|KeyWord,,1,关键字</LabelParam>
+    <LabelTable>ZL_Expert_View</LabelTable>
+    <LabelField>CompanyName,Permissions,salt,UserID,UserName,HomePage</LabelField>
+    <LabelWhere>Status=99 And ModelID=49 And (CompanyName like '%@KeyWord%' or Permissions like '%@KeyWord%')</LabelWhere>
+    <LabelOrder>OrderID DESC</LabelOrder>
+    <LabelContent>&lt;div class="weui-panel weui-panel_access"&gt;
+&lt;div class="weui-panel__hd"&gt;专家列表&lt;/div&gt;
+&lt;div class="weui-panel__bd"&gt;
+{Repeate}
+&lt;a href="/expert.aspx?expid={Field="UserID"/}" class="weui-media-box weui-media-box_appmsg"&gt;
+&lt;div class="weui-media-box__hd"&gt;
+&lt;img class="weui-media-box__thumb" src="{Field="salt"/}" alt="{Field="Permissions"/}" onerror="javascript:this.src='/Images/userface/noface.png';" /&gt;
+&lt;/div&gt;
+&lt;div class="weui-media-box__bd"&gt;
+&lt;h4 class="weui-media-box__title"&gt;{Field="Permissions"/} | {Field="HomePage"/}&lt;/h4&gt;
+&lt;p class="weui-media-box__desc"&gt;{Field="CompanyName"/}&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="weui-media-box__hd" style="width:auto; margin-right:0;"&gt;
+&lt;button type="button" class="btn btn-success"&gt;查看详情&lt;/button&gt;
+&lt;/div&gt;
+&lt;/a&gt;{/Repeate}
+&lt;/div&gt;
+&lt;/div&gt;
+{ZL.Page id="大图标响应式列表分页"/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_CommonModel","tb_s":"ZL_C_zjmx"}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

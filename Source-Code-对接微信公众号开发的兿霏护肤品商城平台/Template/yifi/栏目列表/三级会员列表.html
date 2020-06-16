@@ -1,0 +1,57 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我的推广</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+</head>
+<body style="background:#f5f5f5;">
+<div class="fans_type">
+<ul>
+<li data-gid="1"><a href="?gid=1">微信会员<span>({ZL.Label id="获取当前用户指定会员组三级会员总数" GroupID="1" /})</span></a></li>
+<li data-gid="2"><a href="?gid=2">正式会员<span>({ZL.Label id="获取当前用户指定会员组三级会员总数" GroupID="2" /})</span></a></li>
+<div class="clearfix"></div>
+</ul>
+</div>
+
+<div class="container padding0">
+<div class="fans_list">
+{ZL.Label id="获取当前用户三级会员列表_分页" ShowNum="10" GroupID="{$GetRequest(gid)$}" /}
+</div>
+</div>
+<div style="height:52px;"></div>
+<div class="wei_bottom">
+<ul>
+<li><a href="{ZL:GetNodeLinkUrl(8)/}"><i class="fa fa-home"></i>首页 </a></li>
+<li><a href="{ZL:GetNodeLinkUrl(9)/}"><i class="fa fa-briefcase"></i>产品专区</a></li>
+<li><a href="/Guest/Ask/Add1.aspx"><i class="fa fa-question-circle"></i>咨询</a></li>
+<li><a href="/Index"><i class="fa fa-paw"></i>论坛</a></li>
+<li class="active"><a href="/User"><i class="fa fa-user"></i>我的</a></li>
+<div class="clearfix"></div>
+</ul>
+</div>
+</body>
+</html>
+<script>
+$().ready(function(e) {
+    if("{$GetRequest(gid)$}"==""||"{$GetRequest(gid)$}"=="1")
+		$(".fans_type li[data-gid=1]").addClass("active");
+	else if("{$GetRequest(gid)$}"=="2")
+		$(".fans_type li[data-gid=2]").addClass("active");
+	$(".fans_list .media-left img").each(function(index, element) {
+		var obj=this;
+		$.get("/wxpage.aspx?code={$GetRequest(code)$}&uid="+$(obj).data("uid"), function(data){
+			if(data!="")
+			{
+				var userinfo=JSON.parse(data);
+				$(obj).attr("src",userinfo.headimgurl);
+			}
+		});
+	});
+});
+</script>

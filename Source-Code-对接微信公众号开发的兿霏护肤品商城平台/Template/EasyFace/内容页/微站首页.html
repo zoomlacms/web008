@@ -1,0 +1,199 @@
+{ZL.Source id="节点栏目信息数据源"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" >
+<link href="/dist/css/weui.min.css" rel="stylesheet" />
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="/Design/h5/css/swiper.min.css" rel="stylesheet" />
+<script src="/Design/h5/js/swiper.min.js"></script>
+<script>
+//$.post("/API/UserCheck.ashx?action=HasLogged", "", function (data) {
+//	if (!data || data == "-1") {
+//		location = "/wxpromo.aspx?r="+window.location.href;
+//	}
+//});
+</script>
+<style>
+.top-img { position: absolute; }
+.swiper-container { width: 100%; background: #fff; }
+
+.swiper-slide a img { width: 100%;}
+.swiper-pagination-bullet { width: 8px; height: 2px; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; /*box-shadow: rgba(0,0,0,.5) 0 0 7px;*/ }
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet { margin: 0 3px; }
+.swiper-slide h3 { position:absolute; top:50%; left:0; margin-top:-13px; margin-bottom:0; width:100%; text-align:center; color:#fff; font-family:"STHeiti","Microsoft YaHei","黑体","arial";}
+.thumbul { margin:0 -5px; padding:0; list-style:none;}
+.myIndex_list_cpt { margin-top:10px;}
+.thumbul_c { margin-top:10px; position:relative; padding-top:100%; overflow:hidden; border:1px solid #ddd;}
+.thumbul_c img { display:block; position:absolute; top:50%; left:50%; width:100%; -webkit-transform:translate(-50%,-50%); transform:translate(-50%,-50%);}
+.myIndex_list_cb ul { margin-bottom:0;  padding-left:0; list-style:none;}
+.myIndex_list_cb li { float:left; width:25%; text-align:center;}
+.hot_span { display:block; float:left; margin-right:2px; padding-left:5px; padding-right:5px; height:20px; font-size:0.7em; text-align:center; background:#ff914d; color:#fff; line-height:20px; border-radius:4px;}
+.best_span { display:block; float:left; margin-right:2px; padding-left:5px; padding-right:5px; height:20px; font-size:0.7em; text-align:center; background:#f8220c; color:#fff; line-height:20px; border-radius:4px;}
+.ding_span { display:block; float:left; margin-right:2px; padding-left:5px; padding-right:5px; height:20px; font-size:0.7em; text-align:center; background:#66a3ff; color:#fff; line-height:20px; border-radius:4px;}
+.myIndex_list { font-family:"STHeiti","Microsoft YaHei","黑体","arial";}
+.myIndex_list_cr { }
+.myIndex_list_cr ul { margin-bottom:0; padding-left:0; list-style:none;}
+.myIndex_list_cr li { margin-top:5px;}
+.myIndex_list_cr li p { margin-bottom:0;}
+.myIndex_list_cr li p span { color:#5f96d0;}
+.myIndex_list_crb { margin-top:5px; text-align:center; }
+.myIndex_list_b { margin-top:1em; text-align:center;}
+.wei_index { padding-bottom:1em; background:#f0efef;}
+.wei_banner { height:210px;}
+</style>
+</head>
+<body>
+<div class="swiper-container wei_banner">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><a href="#"><img src="{$CssDir/}images/wei_banner1.jpg" alt="EasyFace" /></a></div>
+<div class="swiper-slide"><a href="#"><img src="{$CssDir/}images/wei_banner1.jpg" alt="EasyFace" /></a></div>
+<div class="swiper-slide"><a href="#"><img src="{$CssDir/}images/wei_banner1.jpg" alt="EasyFace" /></a></div>
+</div>
+<!-- 如果需要分页器 -->
+<div class="swiper-pagination swiper-pagination-white"></div>
+</div>
+<div class="wei_top_t"><span><img src="{$CssDir/}images/hometop_pic2.png" alt="" /> 简单护肤，护肤可以很简单</span></div>
+<div class="container padding0_xs home_class">
+<ul>
+<li><a href="{ZL:GetNodeLinkUrl(9)/}"><img src="{$CssDir/}images/user.png" alt="" />单品专区</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(12)/}"><img src="{$CssDir/}images/map.png" alt="" />套餐专区</a></li>
+<li><a href="{ZL:GetInfoUrl(61)/}"><img src="{$CssDir/}images/date.png" alt="" />购买须知</a></li>
+<li><a href="/Index"><img src="{$CssDir/}images/graph.png" alt="" />艺霏之家</a></li>
+</ul>
+</div>
+<div class="home_pros container">
+<div class="home_pro"><a href="{ZL:GetShopUrl(3)/}"><img src="{$CssDir/}images/home_pro1.jpg" alt="艺霏虾青素莹润修护精华液" onerror="javascript:this.src='/Images/userface/nopic.png'" /></a></div>
+<div class="home_pro"><a href="{ZL:GetShopUrl(1)/}"><img src="{$CssDir/}images/home_pro2.jpg" alt="艺霏深透雪颜敷贴（脸颊型）" onerror="javascript:this.src='/Images/userface/nopic.png'" /></a></div>
+<div class="home_pro"><a href="{ZL:GetShopUrl(2)/}"><img src="{$CssDir/}images/home_pro3.jpg" alt="艺霏深透雪颜敷贴（全脸型）" onerror="javascript:this.src='/Images/userface/nopic.png'" /></a></div>
+</div>
+
+<div class="wei_pro hidden">
+<div class="wei_pro_t" style="margin-top:0;"><span><i class="fa fa-long-arrow-right"></i><font>产品中心 </font></span><a href="{ZL:GetNodeLinkUrl(9)/}">More>></a></div>
+<div class="container">
+<div class="row">
+{ZL.Label id="微站输出商品图片" ShowNum="3" NodeID="9" /}
+</div>
+</div>
+</div>
+<div class="wei_pro hidden">
+<div class="wei_pro_t"><span><i class="fa fa-long-arrow-right"></i><font>艺霏之家</font></span><a href="/index">More>></a></div>
+<div class="wei_index">
+</div>
+</div>
+<div class="wei_pro hidden">
+<div class="wei_pro_t"><span><i class="fa fa-long-arrow-right"></i><font>美容护肤</font></span><a href="{ZL:GetNodeLinkUrl(1)/}">More>></a></div>
+<div class="container">
+<div class="wei_tie">
+<ul>
+{ZL.Label id="微站输出指定节点标题列表" NodeID="1" ShowNum="10" TitleNum="50" /}
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div class="mobile_cart"><a href="/Cart/Cart.aspx?ProClass=1"><i class="fa fa-shopping-cart"></i></a></div>
+{ZL.Label id="微信底部"/}
+</div>
+
+</body>
+</html>
+<script src="/JS/Controls/B_User.js"></script>
+<script>
+$(function() {
+    if ($('.swiper-slide').length <= 1) {
+        var mySwiper = new Swiper('.swiper-container', {
+            noSwiping: true,
+            noSwipingClass: 'stop-swiping',
+            autoplay: 0
+        });
+
+    } else {
+        var mySwiper = new Swiper('.swiper-container', {
+            //强制Swiper的宽度和高度，当你的Swiper在隐藏状态下初始化时才用得上
+            // width: $(document.body).width(),
+            //height: $(document.body).width() * 360 / 640,
+            // 前进后退按钮
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            // 需要分页器
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            /* paginationType: 'custom',*/
+            //
+            /*slidesPerView: 1,*/
+            /*spaceBetween: 30,*/
+            //自动切换时间
+            autoplay: 5000,
+            //用户操作图片之后，是否禁止autoplay
+            autoplayDisableOnInteraction: false,
+            //循环切换
+            loop: true,
+            //拖动时指针会变成抓手形状
+            grabCursor: true
+        });
+    }
+});
+$().ready(function(e) {
+    $.post("/index","",function(data){
+		$(".wei_index").html($(data).find(".myIndex_list"));
+		$(".thumbul").append("<div class='clearfix'></div>");
+		$(".thumbul li img").css("max-height","none").css("width","100%").css("height","auto");
+		$(".thumbul li").each(function(index, element) {
+			$(this).html("<div class='thumbul_c'>"+$(this).html()+"</div>")
+		});
+		$(".myIndex_list_cr li").each(function(index, element) {
+			$(this).find("p:first-child").html("<span>"+$(this).data("user")+"：</span>"+$(this).find("p:first-child").html())
+		});
+	});
+});
+function AddBuy()
+{
+	form2.submit();
+}
+var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		if(data.TrueName=='') data.TrueName=data.UserName;
+		$(".home_top_l a:nth-child(1)").html("欢迎您，"+data.TrueName+"！");
+		$(".home_top_l a:nth-child(1)").attr("href","/User");
+		$(".home_top_l a:nth-child(2)").hide();
+		$(".home_top_l a:nth-child(3)").show();
+		$(".new_top .media-body h3 a").html("欢迎您，"+data.TrueName+"！").attr("href","/User");
+	}
+	else{
+		$(".home_top_l a:nth-child(3)").hide();
+	}
+});
+function AddToBuy(proid)
+{
+	var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+	buser.IsLogged(function(data,flag){
+		if(flag)
+		{
+			$.post("/Cart/Cart.aspx?ID="+proid+"&Pronum=1");
+			window.location.href="/Cart/Cart.aspx?ProClass=1";
+		}
+		else
+		{
+			window.location.href="/User/Login.aspx?ReturnUrl=/Class_9/Default.aspx";
+		}
+	});
+}
+$("#actionsheet_cancel").click(function(){
+	$("#actionSheet_wrap").hide();
+});
+function AddCartC1()
+{
+	var pronum=$("#Pronum1").val();
+	$.post("/Cart/Cart.aspx?ID="+$("#proid").val()+"&Pronum="+pronum);
+	alert("加入购物车成功！");
+	$("#actionSheet_wrap").hide();
+}
+</script>

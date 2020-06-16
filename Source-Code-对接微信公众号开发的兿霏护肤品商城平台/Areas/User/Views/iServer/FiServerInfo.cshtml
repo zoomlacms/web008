@@ -1,0 +1,173 @@
+﻿@model ZoomLa.Model.M_IServer
+@using System.Data
+@using ZoomLa.Common
+@{
+    DataTable replydDt = ViewBag.replydt;
+}
+@functions{
+}
+@section head{
+    <title>问题详情</title>
+    <script charset="utf-8" src="/Plugins/Ueditor/ueditor.config.js"></script>
+    <script charset="utf-8" src="/Plugins/Ueditor/ueditor.all.min.js"></script>
+}
+@section content{
+    <div id="pageflag" data-nav="index" data-ban="cnt"></div>
+    <div class="container margin_t5">
+        <ol class="breadcrumb">
+            <li><a title="会员中心" href="@Url.Action("Default","")">会员中心</a></li>
+            <li><a href="@Url.Action("FiServer","iServer")">有问必答</a></li>
+            <li class="active">问题详情 <a href="/User/iServer/AddQuestion">[提交新问题]</a></li>
+        </ol>
+    </div>
+    <div class="container margin_t5 btn_green">
+        <table class="table table-striped table-bordered">
+            <tr>
+                <td width="100">标题</td>
+                <td>@Model.Title</td>
+            </tr>
+            <tr>
+                <td width="100">状态</td>
+                <td>@Model.State</td>
+            </tr>
+            <tr>
+                <td>优先级</td>
+                <td>@Model.Priority</td>
+            </tr>
+            <tr>
+                <td>提交来源</td>
+                <td>@Model.Root</td>
+            </tr>
+            <tr>
+                <td>问题类别</td>
+                <td>@Model.Type</td>
+            </tr>
+            <tr>
+                <td>已读次数</td>
+                <td>@Model.ReadCount</td>
+            </tr>
+            <tr>
+                <td>提交时间</td>
+                <td>@Model.SubTime </td>
+            </tr>
+            <tr>
+                <td>解决时间</td>
+                <td>@(Model.State.Equals("已解决") ? Model.SolveTime.ToString() : "未解决")</td>
+            </tr>
+        </table>
+        <table class="table table-striped table-bordered ">
+            <tr>
+                <td class="text-center"><strong>提问详情</strong></td>
+            </tr>
+            <tr>
+                <td>@Model.SubTime.ToString() 来自： <label>@ViewBag.uname</label></td>
+            </tr>
+            <tr>
+                <td>标题：<b>@Model.Title</b> </td>
+            </tr>
+            <tr>
+                <td style="border: #CCC 1px solid;">@MvcHtmlString.Create(Model.Content)</td>
+            </tr>
+            <tr>
+                <td class="attch_td">
+                    <div style="margin-top: 10px;" id="Quest_Attch" class="uploader">
+                        <ul class="filelist"></ul>
+                    </div>
+                    <asp:HiddenField ID="Quest_Attch_Hid" class="uploader_hid" value="@Model.Path.Trim('|')" />
+                </td>
+            </tr>
+        </table>
+        <table class="table table-bordered table-striped ">
+            <tr>
+                <td class="text-center"><label id="rep">问题回复</label></td>
+            </tr>
+            @foreach (DataRow dr in replydDt.Rows)
+            {
+                <tr>
+                    <td>
+                        @dr["ReplyTime"] 来自： <b><label id="lblname">@dr["UserName"]</label></b>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: #CCC 1px solid;">
+                        <label id="lblcontent">@MvcHtmlString.Create(dr["Content"].ToString())</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="attch_td">
+                        <div style="margin-top: 10px;" id="Quest_Attch_@dr["id"]" class="uploader">
+                            <ul class="filelist"></ul>
+                        </div>
+                        <asp:HiddenField ID="Quest_Attch_Hid_@dr["id"]" class="uploader_hid" value="@dr["path"].ToString().Trim('|')" />
+                    </td>
+                </tr>
+            }
+        </table>
+        <div id="replyDiv">
+            <form method="post" action="@MVCHelper.GetAction("QuestionReply_Add",Request)">
+                <table class="table table-bordered table-striped ">
+                    <tr>
+                        <td colspan="2" class="text-center"><strong>补充问题</strong></td>
+                    </tr>
+                    @*<tr>
+                        <td width="120">标题</td>
+                        <td>
+                            <input type="text" id="Title_T" name="Title_T" class="form-control m715-50" />
+                        </td>
+                    </tr>*@
+                    <tr>
+                        <td colspan="2">
+                            <textarea id="Content_T" name="Content_T" style="min-height:300px;"></textarea>
+                            @MvcHtmlString.Create(Call.GetUEditor("Content_T", 4))
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>附件</td>
+                        <td>
+                            <input type="button" class="btn btn-info" id="upfile_btn" value="选择文件" />
+                            <div style="margin-top:10px;" id="uploader" class="uploader"><ul class="filelist"></ul></div>
+                            <input type="hidden" id="Attach_Hid" name="Attach_Hid" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="2">
+                            <button type="submit" class="btn btn-info">保存信息</button>
+                            <a href="@Url.Action("FiServer","iServer")" class="btn btn-info">返回列表</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+}
+@section script{
+    <link href="/JS/Controls/ZL_Webup.css" rel="stylesheet" />
+    <script src="/JS/Controls/ZL_Dialog.js"></script>
+    <script src="/JS/Controls/ZL_Webup.js"></script>
+    <script>
+        function fn_CheckSupportTicket(theForm) {
+            if (!fn_CheckRequired(theForm.content, "回复内容"))
+                return false;
+            return true;
+        }
+        $(function () {
+            ZL_Webup.config.json.accept = 'img';
+            $("#upfile_btn").click(ZL_Webup.ShowFileUP);
+            $(".attch_td").each(function () {
+                var attchpre = new MFileUP({ id: $(this).find(".uploader").attr('id'), hid: $(this).find(".uploader_hid").attr('id') });
+                attchpre.AddReadOnlyLi($(this).find(".uploader_hid").attr('value'));
+            });
+            $("form").validate({//
+                rules: {
+                    Title_T: { required: true },
+                    Content_T: { required: true }
+                },
+                message: {
+                    Title_T: { required: "回复标题不能为空!" },
+                    Content_T: { required: "回复内容不能为空!" }
+                }
+            });
+        })
+        function AddAttach(file, ret, pval) { return ZL_Webup.AddAttach(file, ret, pval); }
+    </script>
+}

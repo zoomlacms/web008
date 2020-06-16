@@ -1,0 +1,77 @@
+﻿{ZL.Source id="文章模型数据源标签"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="文章模型数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="文章模型数据源标签" FD="Tagkey" page="0"/}" />
+<meta name="Description" content="{SField sid="文章模型数据源标签" FD="Title" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/JS/Controls/B_User.js"></script>
+<style>
+body { background:#e9e7e8;}
+.footer_top { border-top:1px solid #b7b7b7;}
+.help_cons { padding:20px; background:#FFF; font-family:"STHeiti","Microsoft YaHei","黑体","arial";}
+.help_cons h3 { margin-top:0; margin-bottom:0; text-align:center; font-size:22px; color:#09BB07; width:180px; margin-right:auto; margin-left:auto;}
+.help_cons h3 span { display:inline-block; padding-top:5px; padding-bottom:5px;}
+.help_cons h3 b { font-weight:500; font-size:16px; color:#333;}
+.help_cons p { margin-bottom:0; text-indent:2em; line-height:25px;}
+.help_cons div { margin-top:2em; text-align:right;}
+</style>
+</head>
+<body>
+<div class="hidden-xs">{ZL.Label id="新版全站头部" /}</div>
+<div class="visible-xs">
+<div class="nuser_top">
+<p>互动中心</p>
+</div>
+</div>
+<div hidden><SCRIPT language=javascript src="/Common/GetHits.aspx?id={SField sid="文章模型数据源标签" FD="GeneralID" page="0"/}"></SCRIPT></div>
+<div class="container margin_top15">
+<div class="help_cons">
+<h3><span>艺霏互动中心</span><b>简介</b></h3>
+<p><b>艺霏互动中心</b>：致力于为消费者提供专业、权威的美容知识，由知名医师、专家为消费者提供专业、无偿的诊疗服务，制定专属的诊疗方案。</p>
+<p><b>上海一非医药科技有限公司</b>将定期、不定期的邀请各大主流知名美容医师、专家坐诊艺霏互动中心，为广大艺霏消费者提供咨询、门诊等服务。</p>
+<p>如果您想早知道专家到诊时间，您可以添加我司公众号“<b>藝霏EASYFACE</b>”，</p>
+<p>关注“<b>艺霏互动中心</b>”。您也可以拨打官方服务热线：021-64149631，或者添加官方QQ：3395447886，或者您也可以直接在微信公众号留言。</p>
+<div>上海一非医药科技有限公司</div>
+</div>
+</div>
+<div class="visible-xs">
+<div style="height:52px;"></div>
+<div class="wei_bottom1">
+<ul>
+<li><a href="/Class_8/Default.aspx"><i class="fa fa-home"></i>首页 </a></li>
+<li class="active"><a href="/Item/63.aspx"><i class="fa fa-question-circle"></i>互动</a></li>
+<li><a href="/Index"><i class="fa fa-paw"></i>艺霏之家</a></li>
+<li><a href="/Cart/Cart.aspx?ProClass=1"><i class="fa fa-shopping-cart"></i>购物车</a></li>
+<li><a href="/User"><i class="fa fa-user"></i>个人中心</a></li>
+<div class="clearfix"></div>
+</ul>
+</div>
+</div>
+<div class="hidden-xs">{ZL.Label id="新版全站底部"/}</div>
+</body>
+</html>
+<script>
+var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		if(data.TrueName=='') data.TrueName=data.UserName;
+		$(".home_top_l a:nth-child(1)").html("欢迎您，"+data.TrueName);
+		$(".home_top_l a:nth-child(1)").attr("href","/User");
+		$(".home_top_l a:nth-child(2)").hide();
+		$(".home_top_l a:nth-child(3)").show();
+		$(".new_top .media-body h3 a").html("欢迎您，"+data.TrueName+"！").attr("href","/User");
+	}
+	else{
+		$(".home_top_l a:nth-child(3)").hide();
+	}
+});
+function LogoutFun()
+{
+	buser.Logout(function(){location=location;});
+}
+</script>

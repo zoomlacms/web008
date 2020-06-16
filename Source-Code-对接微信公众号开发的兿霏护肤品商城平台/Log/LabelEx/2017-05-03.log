@@ -1,0 +1,240 @@
+﻿﻿操作人：(用户名:,管理员名:,IP:42.156.254.22)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetNodeLinkUrl(10)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.19)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetNodeLinkUrl(10)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.22)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(59)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.19)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(59)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.22)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetNodeListUrl(9)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.19)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetNodeListUrl(9)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.22)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetLastinfo(9)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.19)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetLastinfo(9)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.19)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetNodeLinkUrl(11)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.22)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetNodeLinkUrl(11)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.22)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(53)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.22)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(54)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.19)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(53)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.22)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(55)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.19)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(54)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.22)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(56)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.19)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(55)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.22)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(57)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.19)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(56)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.22)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(58)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.19)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(57)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.19)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(58)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.22)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(59)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.156.254.19)
+时间：(2017/5/3 9:17:47),操作：(labelex),来源：(/User/Index/Login)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(59)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.236.99.86)
+时间：(2017/5/3 11:10:30),操作：(labelex),来源：(/User/Login?returnUrl=/Index)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetNodeLinkUrl(10)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.236.99.86)
+时间：(2017/5/3 11:10:30),操作：(labelex),来源：(/User/Login?returnUrl=/Index)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(59)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.236.99.86)
+时间：(2017/5/3 11:10:30),操作：(labelex),来源：(/User/Login?returnUrl=/Index)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetNodeListUrl(9)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.236.99.86)
+时间：(2017/5/3 11:10:30),操作：(labelex),来源：(/User/Login?returnUrl=/Index)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetLastinfo(9)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.236.99.86)
+时间：(2017/5/3 11:10:30),操作：(labelex),来源：(/User/Login?returnUrl=/Index)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetNodeLinkUrl(11)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.236.99.86)
+时间：(2017/5/3 11:10:30),操作：(labelex),来源：(/User/Login?returnUrl=/Index)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(53)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.236.99.86)
+时间：(2017/5/3 11:10:30),操作：(labelex),来源：(/User/Login?returnUrl=/Index)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(54)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.236.99.86)
+时间：(2017/5/3 11:10:30),操作：(labelex),来源：(/User/Login?returnUrl=/Index)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(55)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.236.99.86)
+时间：(2017/5/3 11:10:30),操作：(labelex),来源：(/User/Login?returnUrl=/Index)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(56)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.236.99.86)
+时间：(2017/5/3 11:10:30),操作：(labelex),来源：(/User/Login?returnUrl=/Index)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(57)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.236.99.86)
+时间：(2017/5/3 11:10:30),操作：(labelex),来源：(/User/Login?returnUrl=/Index)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(58)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:42.236.99.86)
+时间：(2017/5/3 11:10:30),操作：(labelex),来源：(/User/Login?returnUrl=/Index)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(59)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.96.47.67)
+时间：(2017/5/3 11:12:27),操作：(labelex),来源：(/User/Login?ReturnUrl=/User)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetNodeLinkUrl(10)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.96.47.67)
+时间：(2017/5/3 11:12:27),操作：(labelex),来源：(/User/Login?ReturnUrl=/User)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(59)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.96.47.67)
+时间：(2017/5/3 11:12:27),操作：(labelex),来源：(/User/Login?ReturnUrl=/User)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetNodeListUrl(9)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.96.47.67)
+时间：(2017/5/3 11:12:27),操作：(labelex),来源：(/User/Login?ReturnUrl=/User)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetLastinfo(9)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.96.47.67)
+时间：(2017/5/3 11:12:27),操作：(labelex),来源：(/User/Login?ReturnUrl=/User)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetNodeLinkUrl(11)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.96.47.67)
+时间：(2017/5/3 11:12:27),操作：(labelex),来源：(/User/Login?ReturnUrl=/User)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(53)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.96.47.67)
+时间：(2017/5/3 11:12:27),操作：(labelex),来源：(/User/Login?ReturnUrl=/User)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(54)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.96.47.67)
+时间：(2017/5/3 11:12:27),操作：(labelex),来源：(/User/Login?ReturnUrl=/User)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(55)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.96.47.67)
+时间：(2017/5/3 11:12:27),操作：(labelex),来源：(/User/Login?ReturnUrl=/User)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(56)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.96.47.67)
+时间：(2017/5/3 11:12:27),操作：(labelex),来源：(/User/Login?ReturnUrl=/User)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(57)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.96.47.67)
+时间：(2017/5/3 11:12:27),操作：(labelex),来源：(/User/Login?ReturnUrl=/User)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(58)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 
+操作人：(用户名:,管理员名:,IP:182.96.47.67)
+时间：(2017/5/3 11:12:27),操作：(labelex),来源：(/User/Login?ReturnUrl=/User)
+详情：(来源：B_CreateHtml,方法名：FunLabelProc,标签：{ZL:GetInfoUrl(59)/},报错：Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 52 - 无法定位 Local Database Runtime 安装。请验证 SQL Server Express 是否正确安装以及本地数据库运行时功能是否已启用。),SQL:打开MSSQL连接失败,SP:,备注：)
+/*-----------------------------------------------------------------------------------*/ 
+ 

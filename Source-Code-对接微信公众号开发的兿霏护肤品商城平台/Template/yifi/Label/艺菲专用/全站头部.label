@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>293</LabelID>
+    <LabelName>全站头部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>艺菲专用</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="relative"&gt;
+&lt;nav class="navbar navbar-default navbar-fixed-top home_nav" id="home_nav"&gt;
+&lt;div class="container"&gt;
+&lt;a class="navbar-brand" href="/"&gt;&lt;embed pluginspage="http://www.adobe.com/svg/viewer/install/" src="{$LogoUrl/}" type="image/svg+xml" /&gt;&lt;/a&gt;
+
+&lt;div class="navbar-header"&gt;
+&lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"&gt;
+&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+&lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+&lt;ul class="nav navbar-nav navlist"&gt;
+&lt;li&gt;&lt;a href="/"&gt;首页 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;品牌&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetNodeLinkUrl(9)/}"&gt;订购&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;优惠券&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetNodeLinkUrl(8)/}"&gt;微站&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="navbar-right nav_login"&gt;
+&lt;li&gt;&lt;a href="/User/Login.aspx"&gt;用户登录&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/User/Register.aspx"&gt;会员注册&lt;/a&gt;&lt;/li&gt; 
+&lt;li&gt;&lt;a href="#"&gt;帮助&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;  
+&lt;div class="home_search navbar-right"&gt;
+&lt;form class="navbar-form" role="search" action="/Search/SearchList.aspx" method="get" target="_blank"  type="searchall" id="searchall" name="searchall"&gt;
+&lt;div class="form-group"&gt;
+&lt;input name="KeyWord" class="form-control" type="text"  placeholder="全站搜索"&gt;
+&lt;/div&gt;
+&lt;button class="btn btn-default" id="searchall" name="searchall" type="searchall"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/form&gt;
+&lt;/div&gt;   
+&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.container --&gt;
+&lt;/nav&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

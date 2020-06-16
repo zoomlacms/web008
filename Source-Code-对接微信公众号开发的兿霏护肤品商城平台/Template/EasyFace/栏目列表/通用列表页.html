@@ -1,0 +1,94 @@
+{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<style>
+@media screen and (max-width:768px){
+.lie_banner { height:100px;}
+}
+</style>
+</head>
+<body>
+
+<div class="hidden-xs">
+{ZL.Label id="新版全站头部"/}
+</div>
+<div class="visible-xs">
+<div class="new_top">
+<div class="media">
+<div class="media-left media-middle"><a href="/Class_8/Default.aspx"><img src="/Template/EasyFace/style/images/logo_w.svg" alt="EasyFace" /></a></div>
+<div class="media-body"><h3><a href="/User/Login">登录</a></h3><p><img src="/Template/EasyFace/style/images/hometop_pic1.png" alt="EasyFace" /> 简单护肤，护肤可以很简单</p></div>
+</div>
+</div>
+</div>
+<div class="lie_banner"></div>
+<div class="lie_cont">
+<div class="container">
+<!--主体开始 -->
+<div id="main">
+<div class="row">
+
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+<div id="mysite" class="hidden-xs">
+<ul class="breadcrumb" >
+<li><a href="/">首页</a><span class="divider"></span></li>
+{ZL.Label id="输出多级节点导航_V3" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" ShowNum="30" /}
+<li class="active">栏目列表</li>
+</ul>
+</div>
+<div id="main_l" class="mt10 "> 
+<ul>
+{ZL.Label id="输出指定节点标题列表_带时间属性_响应式分页v3" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" TitleNum="90" ShowNum="10" /}
+</ul> 
+</div> <!--右 -->
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div id="main_r">
+<div class="mainR_li">
+<div class="mainR_t"><span><a href="{ZL:GetNodeLinkUrl(1)/}">更多>></a></span><b>最新资讯</b></div>
+<ul id="mainR_ph">
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="1" TitleNum="34" ShowNum="8" /} 
+</ul>
+</div>
+
+</div><!--左 -->
+</div>
+</div>
+</div>
+<!--频道首页主体结束 -->
+</div>
+</div>
+
+<div class="mobile_cart"><a href="/Cart/Cart.aspx?ProClass=1"><i class="fa fa-shopping-cart"></i></a></div>
+<div class="hidden-xs">{ZL.Label id="新版全站底部"/}</div>
+<div class="visible-xs">
+{ZL.Label id="微信底部"/}
+</div>
+</body>
+</html>
+<script>
+var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		if(data.TrueName=='') data.TrueName=data.UserName;
+		$(".home_top_l a:nth-child(1)").html("欢迎您，"+data.TrueName+"！");
+		$(".home_top_l a:nth-child(1)").attr("href","/User");
+		$(".home_top_l a:nth-child(2)").hide();
+		$(".home_top_l a:nth-child(3)").show();
+		$(".new_top .media-body h3 a").html("欢迎您，"+data.TrueName+"！").attr("href","/User");
+	}
+	else{
+		$(".home_top_l a:nth-child(3)").hide();
+	}
+});
+</script>

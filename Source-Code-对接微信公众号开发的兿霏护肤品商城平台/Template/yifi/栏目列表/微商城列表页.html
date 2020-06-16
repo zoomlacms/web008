@@ -1,0 +1,288 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<link href="/dist/css/weui.min.css" rel="stylesheet" />
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="{$CssDir/}swiper-3.3.1.min.css" rel="stylesheet" />
+<script src="{$CssDir/}js/swiper-3.3.1.jquery.min.js"></script>
+<script src="{$CssDir/}js/jquery-ui.min.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<style>
+.top-img { position: absolute; }
+.swiper-container { width: 100%; background: #fff; }
+.swiper-slide { display: block; width: 100%; margin-right: 0px; padding-top: 56.5%; background-repeat: no-repeat; background-size: cover; background-position: center; /* Center slide text vertically */ display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+.swiper-slide a { display: block; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; }
+.swiper-pagination-bullet { width: 8px; height: 2px; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; /*box-shadow: rgba(0,0,0,.5) 0 0 7px;*/ }
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet { margin: 0 3px; }
+</style>
+</head>
+<body>
+<div class="hidden-xs">{ZL.Label id="全站头部"/}</div>
+<div class="shang_banner hidden-xs"></div>
+<div class="visible-xs">
+<div class="myIndex_banner">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide myIndex_banner1">
+<a href="#"></a>
+</div>
+</div>
+<!-- 如果需要分页器 -->
+<div class="swiper-pagination swiper-pagination-white"></div>
+</div>
+</div>
+<div class="wei_top_t"><span>兿霏，简单护肤，护肤可以很简单</span></div>
+</div>
+<div class="container">
+<div class="shang_cont_t hidden-xs">{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</div>
+{ZL.Label id="输出指定商品信息_左图样式" PID="1" /}
+{ZL.Label id="输出指定商品信息_上图样式" PID="2" /}
+{ZL.Label id="输出指定商品信息_右图样式" PID="3" /}
+</div>
+<div class="mobile_cart"><a href="/User/Login.aspx?ReturnUrl=/Cart/Cart.aspx?ProClass=1"><i class="fa fa-shopping-cart"></i></a></div>
+<div class="hidden-xs">{ZL.Label id="全站底部"/}</div>
+<div class="visible-xs">
+<div style="height:52px;"></div>
+<div class="wei_bottom">
+<ul>
+<li><a href="{ZL:GetNodeLinkUrl(8)/}"><i class="fa fa-home"></i>首页 </a></li>
+<li class="active"><a href="{ZL:GetNodeLinkUrl(9)/}"><i class="fa fa-briefcase"></i>产品专区</a></li>
+<li><a href="/User/Login.aspx?ReturnUrl=/Guest/Ask/Add1.aspx"><i class="fa fa-question-circle"></i>咨询</a></li>
+<li><a href="/Index"><i class="fa fa-paw"></i>论坛</a></li>
+<li><a href="/User"><i class="fa fa-user"></i>我的</a></li>
+<div class="clearfix"></div>
+</ul>
+</div>
+</div>
+
+<div id="actionSheet_wrap" style="display:none;">
+<div class="weui_mask_transition weui_fade_toggle" id="mask" style="display: block;"></div>
+<div class="weui_actionsheet weui_actionsheet_toggle" id="weui_actionsheet">
+<div class="mobile_buy">
+<div class="mobile_buy_t">
+<div class="weui_media_box weui_media_appmsg">
+<div class="weui_media_hd">
+<img class="weui_media_appmsg_thumb" src="" alt="佬哆猪肉饭" onerror="javascript:this.src='/UploadFiles/nopic.gif';">
+</div>
+<div class="weui_media_bd">
+<h4 class="weui_media_title"></h4>
+<p class="weui_media_desc"></p>
+</div>
+</div>
+</div>
+<div class="mobile_buy_n">
+<div class="weui_cells">
+<div class="weui_cell">
+<div class="weui_cell_bd weui_cell_primary"><p>购买数量：</p></div>
+<div class="weui_cell_ft">
+<form id="form2" name="form2" method="post" action="/Cart/Cart.aspx">
+<input name="id" type="hidden" id="proid" value="0" />
+<input name="ProClass" type="hidden" value="1" />
+<input name="remark" type="hidden" value="" />
+<button class="J_minus btn btn-default btn-sm" type="button"><i class="fa fa-minus"></i></button>
+<input name="Pronum" class="J_input form-control input-sm" id="Pronum1" type="text" value="1" />
+<button class="J_add btn btn-default btn-sm" type="button"><i class="fa fa-plus"></i></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="mobile_buy_b">
+<div class="row padding10">
+<div class="col-xs-6 padding5"><button type="button" class="btn btn-danger btn-sm btn-block" onclick="AddBuy();">立即购买</button></div>
+<div class="col-xs-6 padding5"><button type="button" class="btn btn-warning btn-sm btn-block" onclick="AddCartC1();">加入购物车</button></div>
+</div>
+
+
+</div>
+<div id="actionsheet_cancel"><span class="fa-stack fa-lg"><i class="fa fa-close fa-stack-1x"></i><i class="fa fa-circle-thin fa-stack-2x"></i></span></div>
+</div>
+</div>
+</div>
+</body>
+</html>
+<script>
+$(function() {
+    if ($('.swiper-slide').length <= 1) {
+        var mySwiper = new Swiper('.swiper-container', {
+            noSwiping: true,
+            noSwipingClass: 'stop-swiping',
+            autoplay: 0
+        });
+
+    } else {
+        var mySwiper = new Swiper('.swiper-container', {
+            //强制Swiper的宽度和高度，当你的Swiper在隐藏状态下初始化时才用得上
+            // width: $(document.body).width(),
+            //height: $(document.body).width() * 360 / 640,
+            // 前进后退按钮
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            // 需要分页器
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            /* paginationType: 'custom',*/
+            //
+            /*slidesPerView: 1,*/
+            /*spaceBetween: 30,*/
+            //自动切换时间
+            autoplay: 5000,
+            //用户操作图片之后，是否禁止autoplay
+            autoplayDisableOnInteraction: false,
+            //循环切换
+            loop: true,
+            //拖动时指针会变成抓手形状
+            grabCursor: true
+        });
+    }
+
+});
+
+function AddToCart(obj,proid)
+{
+	var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+	buser.IsLogged(function(data,flag){
+		if(flag)
+		{
+			$(".weui_media_title").html($(obj).parent().parent().parent().find("h3 a").html())
+			$(".weui_media_appmsg_thumb").attr("src",$(obj).parent().parent().parent().find("img").attr("src"));
+			$(".weui_media_desc").html($(obj).parent().parent().find("span:first-child").html());
+			$("#proid").val(proid);
+			$("#actionSheet_wrap").show();
+		}
+		else
+		{
+			window.location.href="/User/Login.aspx?ReturnUrl=/Class_9/Default.aspx";
+		}	
+	});
+}
+function AddCartC1()
+{
+	var pronum=$("#Pronum1").val();
+	$.post("/Cart/Cart.aspx?ID="+$("#proid").val()+"&Pronum="+pronum);
+	alert("加入购物车成功！");
+	$("#actionSheet_wrap").hide();
+}
+$("#actionsheet_cancel").click(function(){
+	$("#actionSheet_wrap").hide();
+})
+/*商品加减*/
+$.fn.iVaryVal=function(iSet){
+	iSet=$.extend({Minus:$('.J_minus'),Add:$('.J_add'),Input:$('.J_input'),Min:1,Max:100,Fun:null},iSet);
+	var C=null,O=null;
+	//输出值全局对象[若担心全局对象污染，可定义一个hidden表单，向其传值]
+	$GLOBAL={};
+	//增加
+	iSet.Add.each(function(i){
+		$(this).click(function(){
+			O=parseInt(iSet.Input.eq(i).val());
+			(O+1<=iSet.Max) || (iSet.Max==null) ? iSet.Input.eq(i).val(O+1) : iSet.Input.eq(i).val(iSet.Max);
+			//输出当前改变后的值
+			$GLOBAL.val=iSet.Input.eq(i).val();
+			$GLOBAL.index=i;
+			//回调函数
+			if (typeof iSet.Fun == 'function') {
+				iSet.Fun.call(this);
+			}
+		});
+	});
+	//减少
+	iSet.Minus.each(function(i){
+		$(this).click(function(){
+			O=parseInt(iSet.Input.eq(i).val());
+			O-1<iSet.Min ? iSet.Input.eq(i).val(iSet.Min) : iSet.Input.eq(i).val(O-1);
+			$GLOBAL.val=iSet.Input.eq(i).val();
+			$GLOBAL.index=i;
+			//回调函数
+			if (typeof iSet.Fun == 'function'){
+				iSet.Fun.call(this);
+			}
+		});
+	});
+	//手动
+	iSet.Input.bind({
+		'click':function(){
+			O=parseInt($(this).val());
+			$(this).select();
+		},
+		'keyup':function(e){
+			if($(this).val()!=''){
+				C=parseInt($(this).val());
+				//非负整数判断
+				if(/^[1-9]\d*|0$/.test(C)){
+					$(this).val(C);
+					O=C;
+				}
+				else{
+					$(this).val(O);
+				}
+			}
+			//键盘控制：上右--加，下左--减
+			if(e.keyCode==38 || e.keyCode==39){
+				iSet.Add.eq(iSet.Input.index(this)).click();
+			}
+			if(e.keyCode==37 || e.keyCode==40){
+				iSet.Minus.eq(iSet.Input.index(this)).click();
+			}
+			//输出当前改变后的值
+			$GLOBAL.val=$(this).val();
+			$GLOBAL.index=iSet.Input.index(this);
+			//回调函数
+			if (typeof iSet.Fun == 'function') {
+				iSet.Fun.call(this);
+			}
+		},
+		'blur':function(){
+			$(this).trigger('keyup');
+			if($(this).val()==''){
+				$(this).val(O);
+			}
+			//判断输入值是否超出最大最小值
+			if(iSet.Max){
+				if(O>iSet.Max){
+					$(this).val(iSet.Max);
+				}
+			}
+			if(O<iSet.Min){
+				$(this).val(iSet.Min);
+			}
+			//输出当前改变后的值
+			$GLOBAL.val=$(this).val();
+			$GLOBAL.index=iSet.Input.index(this);
+			//回调函数
+			if (typeof iSet.Fun == 'function') {
+				iSet.Fun.call(this);
+			}
+		}
+	});
+}
+$( function() {
+	$('.i_box').iVaryVal({Fun:function(){ }});
+});
+function AddBuy()
+{
+	form2.submit();
+}
+function AddToBuy(proid)
+{
+	var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+	buser.IsLogged(function(data,flag){
+		if(flag)
+		{
+			$.post("/Cart/Cart.aspx?ID="+proid+"&Pronum=1");
+			window.location.href="/Cart/Cart.aspx?ProClass=1";
+		}
+		else
+		{
+			window.location.href="/User/Login.aspx?ReturnUrl=/Class_9/Default.aspx";
+		}
+	});
+}
+</script>

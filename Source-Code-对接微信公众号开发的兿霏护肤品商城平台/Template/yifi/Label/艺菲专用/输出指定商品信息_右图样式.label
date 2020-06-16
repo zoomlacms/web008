@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>346</LabelID>
+    <LabelName>输出指定商品信息_右图样式</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>艺菲专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>PID,0,1,商品ID</LabelParam>
+    <LabelTable>ZL_Commodities LEFT JOIN ZL_P_Shop ON ZL_Commodities.ItemID=ZL_P_Shop.ID</LabelTable>
+    <LabelField>ZL_Commodities.ProClass,ZL_Commodities.ID,ZL_Commodities.LinPrice,ZL_Commodities.Proinfo,ZL_Commodities.Proname,ZL_Commodities.Thumbnails,ZL_P_Shop.spgg</LabelField>
+    <LabelWhere> ZL_Commodities.ID='@PID'</LabelWhere>
+    <LabelOrder>ZL_Commodities.AddTime DESC</LabelOrder>
+    <LabelContent>&lt;div class="shop_list1"&gt;
+&lt;div class="row padding10"&gt;
+&lt;div class="col-xs-6 padding5 shop_list1_r"&gt;
+&lt;h3&gt;&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}"&gt;{Field="Proname"/}&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="shop_list1_rp1"&gt;规格：{Field="spgg"/}&lt;/div&gt;
+&lt;div class="shop_list1_rp2"&gt;{Field="Proinfo"/}&lt;/div&gt;
+&lt;div class="shop_list1_rp3"&gt;
+&lt;span&gt;￥{ZL:GetMoney({Field="LinPrice"/},2,1)/}&lt;/span&gt;
+&lt;button type="button" class="btn btn-danger" onclick="AddToBuy('{Field="ID"/}');"&gt;&lt;i class="fa fa-check"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button type="button" class="btn btn-info" onclick="AddToCart(this,'{Field="ID"/}');"&gt;&lt;i class="fa fa-cart-plus"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-xs-6 padding5"&gt;
+&lt;div class="shop_list1_l"&gt;&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}"&gt;&lt;img class="media-object" src="{ZL:GetPicUrl({Field="Thumbnails"/})/}" alt="{Field="Proname"/}" onerror="javascript:this.src='/UploadFiles/nopic.gif';" /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

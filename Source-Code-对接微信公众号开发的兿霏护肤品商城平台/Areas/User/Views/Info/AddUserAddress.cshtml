@@ -1,0 +1,134 @@
+﻿@using ZoomLa.Model;
+@using ZoomLa.BLL;
+@model ZoomLa.Model.M_UserRecei
+@{
+    Layout = "~/Areas/User/Views/Shared/_layout.cshtml";
+    M_UserInfo mu = new B_User().GetLogin();
+    M_Group groupMod = new M_Group();
+    B_Group groupBll = new B_Group();
+    groupMod = groupBll.SelReturnModel(mu.GroupID);
+}
+@section head{<title>地址管理</title>
+}
+@section content{
+    <div id="pageflag" data-nav="shop" data-ban="shop"></div>
+    <div class="container margin_t5" hidden>
+        <ol class="breadcrumb">
+            <li><a title="会员中心" href="@Url.Action("Default","")">会员中心</a></li>
+            <li><a href="@Url.Action("UserRecei", "info")">我的地址</a></li>
+            <li class="active">地址管理</li>
+        </ol>
+    </div>
+<div class="muser_top">
+<div class="container">
+<div class="media">
+<div class="media-left"><a href="/User/Info/UserBase"><img src="@mu.UserFace" alt="@mu.UserName" onerror="javascript:this.src='/Images/userface/noface.png';" /></a></div>
+<div class="media-body media-middle">
+<p class="muser_p"><span>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"获取当前登录用户真实姓名\"/}"))</span><span><span>@groupMod.GroupName</span></span><a href="/wxshare.aspx" id="wxshare">我的二维码</a></p>
+<h4>上次登陆时间：@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"获取当前登录用户上次登录时间\"/}")) </h4>
+<p><a href="/User/Info/UserBase"> 账号管理 </a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="container btn_green btn_green_xs padding0_xs">
+<form method="post" action="@MVCHelper.GetAction("Address_Add",Request)" onsubmit="return CheckForm();">
+<div class="weui-cells margin_top0">
+<div class="weui-cell">
+<div class="weui-cell__hd">
+<label class="weui-label">所在地区</label>
+</div>
+<div class="weui-cell__bd">
+<select id="province_dp" class="form-control td_m" name="province_dp"></select>
+<select id="city_dp" class="form-control td_m" name="city_dp"></select>
+<select id="county_dp" class="form-control td_m" name="county_dp"></select>
+<input type="hidden" id="pro_hid" name="pro_hid" value="@Model.Provinces" />
+</div>
+</div>
+<div class="weui-cell">
+<div class="weui-cell__hd">
+<label class="weui-label">详细地址</label>
+</div>
+<div class="weui-cell__bd">
+<textarea id="street_t" name="street_t" class="weui-textarea" title="详细地址不能为空" rows="3" placeholder="详细地址">@Model.Street</textarea>
+</div>
+</div>
+<div class="weui-cell">
+<div class="weui-cell__hd">
+<label class="weui-label">邮政编码</label>
+</div>
+<div class="weui-cell__bd">
+<input type="text" id="zipcode_t" name="zipcode_t" class="weui-input" maxlength="6" value="@Model.Zipcode" placeholder="邮政编码"/>
+</div>
+</div>
+<div class="weui-cell">
+<div class="weui-cell__hd">
+<label class="weui-label">收货人姓名</label>
+</div>
+<div class="weui-cell__bd">
+<input type="text" id="recename_t" name="recename_t" class="weui-input" title="收货人姓名不能为空" value="@Model.ReceivName" placeholder="收货人姓名" />
+</div>
+</div>
+<div class="weui-cell">
+<div class="weui-cell__hd">
+<label class="weui-label">手机号码</label>
+</div>
+<div class="weui-cell__bd">
+<input type="text" id="mobilenum_t" name="mobilenum_t" class="weui-input" maxlength="13" value="@Model.MobileNum" placeholder="手机号"/>
+</div>
+</div>
+<div class="weui-cell">
+<div class="weui-cell__bd">
+<label class="weui-label">默认地址</label>
+</div>
+<div class="weui-cell__ft">
+<input class="weui-switch" type="checkbox" id="Def_chk" name="Def_chk" value="1" @(Model.isDefault == 1 ? "checked=\"checked\"" : "")/>
+</div>
+</div>
+</div>
+<input type="submit" class="weui-btn weui-btn_primary margin_top20" value="保存" />
+<a href="/User/info/UserRecei" class="weui-btn weui-btn_primary">返回</a>
+</form>
+</div>
+}
+@section script{
+<link href="/App_Themes/V3.css" rel="stylesheet" />
+<link href="/dist/css/bootstrap-switch.min.css" rel="stylesheet" />
+<style type="text/css">
+    .control-sm {width: 120px;display: inline-block;}
+    .td_m { display:inline-block; float:left; width:33.333%;}
+    label { margin-bottom:0; font-weight:500;}
+</style>
+<script src="/dist/js/bootstrap-switch.js"></script>
+<script src="/JS/ICMS/area.js"></script>
+<script src="/JS/Controls/ZL_PCC.js"></script>
+<script src="/JS/ZL_Regex.js"></script>
+<script>
+    $(function () {
+        ZL_Regex.B_Num(".num");
+        var pcc = new ZL_PCC("province_dp", "city_dp", "county_dp");
+        if ($("#pro_hid").val() == "") {
+            pcc.ProvinceInit();
+        }
+        else {
+            var attr = $("#pro_hid").val().split(' ');
+            pcc.SetDef(attr[0], attr[1], attr[2]);
+            pcc.ProvinceInit();
+        }
+        jQuery.validator.addMethod("phones", function (value) {
+            return ZL_Regex.isMobilePhone(value);
+        }, "请输入正确的手机号码!");
+        $("form").validate({});
+    });
+    function CheckForm() {
+        $("#pro_hid").val($("#province_dp option:selected").text() + " " + $("#city_dp option:selected").text() + " " + $("#county_dp option:selected").text());
+        var vaild = $("form").validate({ meta: "validate" });
+        return vaild.form();
+    }
+    $().ready(function(e) {
+        $("#wxshare").hide();
+        var gid='@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"获取当前登录用户会员组ID\"/}"))';
+        if(gid=="3") $("#wxshare").show();
+    });
+</script>
+}

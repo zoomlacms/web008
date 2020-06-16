@@ -1,0 +1,59 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>319</LabelID>
+    <LabelName>后台输出会员分销列表</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>艺菲专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,10,1,显示数</LabelParam>
+    <LabelTable>ZL_User</LabelTable>
+    <LabelField>Purse,UserID,UserName</LabelField>
+    <LabelWhere>UserID&gt;0</LabelWhere>
+    <LabelOrder>ZL_User.UserID DESC</LabelOrder>
+    <LabelContent>&lt;table class="table table-bordered"&gt;
+&lt;tr&gt;
+&lt;th&gt;ID&lt;/th&gt;
+&lt;th&gt;会员名&lt;/th&gt;
+&lt;th&gt;资金&lt;/th&gt;
+&lt;th&gt;一级会员数&lt;/th&gt;
+&lt;th&gt;一级会员消费金额&lt;/th&gt;
+&lt;th&gt;二级会员数&lt;/th&gt;
+&lt;th&gt;二级会员消费金额&lt;/th&gt;
+&lt;th&gt;三级会员数&lt;/th&gt;
+&lt;th&gt;三级会员消费金额&lt;/th&gt;
+&lt;/tr&gt;
+{Repeate}
+&lt;tr&gt;
+&lt;td&gt;{Field="UserID"/}&lt;/td&gt;
+&lt;td&gt;{Field="UserName"/}&lt;/td&gt;
+&lt;td&gt;{ZL:GetMoney({Field="Purse"/},2,1)/}&lt;/td&gt;
+&lt;td&gt;{ZL.Label id="获取指定用户一级会员总数" UserID="{Field="UserID"/}" /}&lt;/td&gt;
+&lt;td&gt;{ZL.Label id="获取指定用户一级会员消费总金额" UserID="{Field="UserID"/}" /}&lt;/td&gt;
+&lt;td&gt;{ZL.Label id="获取指定用户二级会员总数" UserID="{Field="UserID"/}" /}&lt;/td&gt;
+&lt;td&gt;{ZL.Label id="获取指定用户二级会员消费总金额" UserID="{Field="UserID"/}" /}&lt;/td&gt;
+&lt;td&gt;{ZL.Label id="获取指定用户三级会员总数" UserID="{Field="UserID"/}" /}&lt;/td&gt;
+&lt;td&gt;{ZL.Label id="获取指定用户三级会员消费总金额" UserID="{Field="UserID"/}" /}&lt;/td&gt;
+&lt;/tr&gt;{/Repeate}
+&lt;tr&gt;
+&lt;td colspan="9"&gt;
+{ZL.Page id="大图标响应式列表分页"/}
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

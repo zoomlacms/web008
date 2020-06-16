@@ -1,0 +1,260 @@
+﻿@using System.Data
+@using ZoomLa.Common
+@using ZoomLa.BLL
+@using ZoomLa.BLL.Helper
+@using ZoomLa.BLL.Plat
+@using ZoomLa.Model
+@using ZoomLa.SQLDAL
+@model ZoomLaCMS.Models.Bar.VM_PClass
+@functions{
+    B_User userBll = new B_User();
+    public string GetUserFace(int userid)
+    {
+        string result = "onerror=\"javascript: this.src = '/Images/userface/noface.png'; \"";
+        M_UserInfo userMod = userBll.SeachByID(userid);
+        if (userMod != null){ result = userMod.UserFace; }
+        return result;
+    }
+    public string GetUserTureName(int userid)
+    {
+        string result = "匿名用户";
+        if (userid > 0)
+        {
+            M_UserInfo userMod = userBll.SeachByID(userid);
+            if (userMod != null)
+            {
+                if (!string.IsNullOrEmpty(userMod.TrueName)){ result = userMod.TrueName; }
+                else{ result = userMod.UserName;}
+            }
+        }
+        return result;
+    }
+}
+@{
+    string tycount = ViewBag.tycount;
+    DataTable cartdt = ViewBag.cartdt;
+    Layout = "~/Views/Bar/_PostBar.cshtml";
+    M_UserInfo mu = new M_UserInfo();
+    B_User bu = new B_User();
+    mu = bu.GetLogin(false);
+   
+}
+@section head{
+<title>社区_@Call.SiteName</title>
+<style>
+body { background:#f0efef;}
+.top-img { position: absolute; }
+.swiper-container { width: 100%; background: #fff; }
+.swiper-slide { display: block; width: 100%; margin-right: 0px; padding-top: 56.5%; background-repeat: no-repeat; background-size: cover; background-position: center; /* Center slide text vertically */ display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+.swiper-slide a { display: block; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; }
+.swiper-pagination-bullet { width: 8px; height: 2px; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; /*box-shadow: rgba(0,0,0,.5) 0 0 7px;*/ }
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet { margin: 0 3px; }
+
+.thumbul { margin-bottom:0;}
+.myIndex_list_cpt { margin-top:5px;}
+.thumbul_c { margin-top:10px; position:relative; padding-top:100%; overflow:hidden; border:1px solid #ddd;}
+.thumbul_c img { display:block; position:absolute; top:50%; left:50%; width:100%; -webkit-transform:translate(-50%,-50%); transform:translate(-50%,-50%);}
+.myIndex_list_cb ul { margin-bottom:0;}
+.myIndex_list_cb li { float:left; width:25%; text-align:center;}
+.hot_span { display:block; float:left; margin-right:2px; padding-left:5px; padding-right:5px; height:20px; font-size:0.7em; text-align:center; background:#ff914d; color:#fff; line-height:20px; border-radius:4px;}
+.best_span { display:block; float:left; margin-right:2px; padding-left:5px; padding-right:5px; height:20px; font-size:0.7em; text-align:center; background:#f8220c; color:#fff; line-height:20px; border-radius:4px;}
+.ding_span { display:block; float:left; margin-right:2px; padding-left:5px; padding-right:5px; height:20px; font-size:0.7em; text-align:center; background:#66a3ff; color:#fff; line-height:20px; border-radius:4px;}
+.myIndex_list_cr { }
+.myIndex_list_cr ul { margin-bottom:0;}
+.myIndex_list_cr li { margin-top:5px;}
+.myIndex_list_cr li p { margin-bottom:0;}
+.myIndex_list_cr li p span { color:#5f96d0;}
+.myIndex_list_crb { margin-top:5px; text-align:center; }
+.myIndex_list_b { text-align:center; margin-top:20px;}
+
+.weui-media-box__info { margin-bottom:0;}
+</style>
+<script src="/JS/ICMS/ZL_Common.js"></script>
+}
+@section content{
+
+<div class="container padding0_xs">
+<div class="media index_top">
+<div class="media-left media-middle"><a href="/"><img src="@Call.GetLabel("{$CssDir/}")images/logo.svg" alt="@Call.GetLabel("{$SiteName/}")" /></a></div>
+<div class="media-body media-middle">
+<p>
+<span>帖子：@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"输出指定帖吧帖子数\" CateID=\"4\"/}"))</span>
+<span>成员：@Call.GetLabel("{ZL.Label id=\"获取用户总数\" /}")</span>
+<span>访问：@Call.GetLabel("{ZL.Label id=\"获取论坛总访问数\" /}")</span>
+<span class="pull-right"><button type="button" class="btn btn-warning btn-xs" id="sinin_bu" onclick="SinIn(this)">签到</button></span>
+</p>
+</div>
+</div>
+
+<div class="index_nav">
+<ul>
+<li><a href="/Class_8/Default.aspx"><span><i class="fa fa-home"></i></span>首页 </a></li>
+<li><a href="/Item/63.aspx"><span><i class="fa fa-question-circle"></i></span>互动</a></li>
+<li><a href="/Index"><span><i class="fa fa-paw"></i></span>艺霏之家</a></li>
+<li><a href="/Cart/Cart.aspx?ProClass=1"><span><i class="fa fa-shopping-cart"></i></span>购物车</a></li>
+<li><a href="/User"><span><i class="fa fa-user"></i></span>个人中心</a></li>
+<div class="clearfix"></div>
+</ul>
+</div>
+
+<div class="myIndex_top" hidden>
+<ul>
+<li class="active"><a href="/Index">全部</a></li>
+<li><a href="/Index?type=1">精华</a></li>
+<li><a href="/Index?type=2">推荐</a></li>
+<div class="clearfix"></div>
+</ul>
+</div>
+
+<div id="myIndex_list" class="myIndex_list"></div>
+
+</div>
+
+<div class="hidden-xs">
+@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"新版全站底部\"/}"))
+</div>
+
+<div class="index_totop"><img src="@Call.GetLabel("{$CssDir/}")images/toTop.png" alt="顶部" />顶部</div>
+
+<div style="height:66px"></div>
+<div class="index_bottom">
+<div class="index_bottom_l"><a href="javascript:;" onClick="ShowSearch();"><i class="fa fa-search"></i></a></div>
+<div class="index_bottom_m"><a href="/EditContent?CateID=4&ID=-1"><i class="fa fa-edit"></i> 发帖子</a></div>
+<div class="index_bottom_r"><a href="#"><img src="@Call.GetLabel("{ZL.Label id=\"获取当前登录用户头像\" /}")" alt="@Call.GetLabel("{ZL:GetuserName()/}")" onerror="javascript:this.src='/Images/userface/noface.png';" /></a></div>
+</div>
+
+<div class="index_search" style="display:none;">
+<div class="index_search_c"></div>
+<div class="index_search_t">
+<form action="/postsearch" method="get">
+<i class="fa fa-search"></i>
+<div class="input-group">
+<input type="text" class="form-control" name="skey" placeholder="请输入要搜索的关键字" />
+<span class="input-group-btn">
+<button class="btn btn-default" type="submit">搜索</button>
+</span>
+</div><!-- /input-group -->
+</form>
+</div>
+</div>
+
+<div>
+<div class="weui-mask" id="iosMask" style="display:none;"></div>
+<div class="weui-actionsheet" id="iosActionsheet" style="padding:5px;background:none;">
+<button type="button" class="btn btn-default btn-lg btn-block" style="color:#f00;" onClick="">收藏</button>
+<button type="button" class="btn btn-default btn-lg btn-block" onClick="hideActionSheet();">取消</button>
+</div>
+</div>
+}
+@section script{
+<script>
+    $().ready(function (e) {
+        $("#myIndex_list").load("/PClass?id=4", {}, function (data) { });
+    })
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 50) {
+            $(".index_totop").animate({ right: '0' });
+        }
+        else {
+            $(".index_totop").animate({ right: '-71px' });
+        }
+    });
+
+    $(".index_totop").click(function () {
+        $("body").animate({ scrollTop: 0 }, 1000, function () {
+            $(".index_totop").animate({ right: '-71px' });
+        });
+    });
+
+    function ShowSearch() {
+        $(".index_search").fadeIn();
+    }
+    $(".index_search_c").click(function () {
+        $(".index_search").fadeOut();
+    });
+    function AddLike(id, obj) {
+        var action = "AddLike";
+        $.post("/Bar/Post_API", { "action": action, "value": id }, function (data) {
+            if (parseInt(data) == 1) {
+                $(obj).attr("onclick", "ReLike('" + id + "',this);");
+                $(obj).find("i").addClass("active");
+                $(obj).find("b").html(parseInt($(obj).find("b").html()) + 1);
+            }
+        });
+    }
+    function ReLike(id, obj) {
+        var action = "ReLike";
+        $.post("/Bar/Post_API", { "action": action, "value": id }, function (data) {
+            if (parseInt(data) == 1) {
+                $(obj).attr("onclick", "AddLike('" + id + "',this);");
+                $(obj).find("i").removeClass("active");
+                $(obj).find("b").html(parseInt($(obj).find("b").html()) - 1);
+            }
+        });
+    }
+
+    function hideActionSheet() {
+        $('#iosActionsheet').removeClass('weui-actionsheet_toggle');
+        $('#iosMask').fadeOut(200);
+    }
+
+    function showActionSheet(postid, obj) {
+        if (parseInt($("#myIndex_list_cmba_" + postid).attr("data-like").indexOf(",@mu.UserID,")) < 0) {
+            $("#iosActionsheet button:first-child").html("收藏");
+            $("#iosActionsheet button:first-child").attr("onclick", "AddColl('"+postid+"');");
+        }
+        else {
+            $("#iosActionsheet button:first-child").html("取消收藏");
+            $("#iosActionsheet button:first-child").attr("onclick", "ReColl('" + postid + "');");
+        }
+        $('#iosActionsheet').addClass('weui-actionsheet_toggle');
+        $('#iosMask').fadeIn(200);
+    }
+    function AddColl(postid) {
+        var action = "AddColl";
+        $.post("/Bar/Post_API?Pid=" + postid, { "action": action, "value": postid }, function (data) {
+            if (parseInt(data) == 1) {
+                $("#myIndex_list_cmba_" + postid).attr("data-like", $("#myIndex_list_cmba_" + postid).data("like") + ",@mu.UserID,");
+                hideActionSheet();
+            }
+        });
+    }
+    function ReColl(postid) {
+        var action = "ReColl";
+        $.post("/Bar/Post_API?Pid=" + postid, { "action": action, "value": postid }, function (data) {
+            if (parseInt(data) == 1) {
+                $("#myIndex_list_cmba_" + postid).attr("data-like", $("#myIndex_list_cmba_" + postid).data("like").replace(",@mu.UserID,",""));
+                hideActionSheet();
+            }
+        });
+    }
+    $().ready(function (e) {
+        $.ajax({
+            url: "/API/UserSinIn.ashx",
+            data: { action: "sinstatu", localtion: "1" },
+            type: "POST",
+            success: function (d) {
+                if (d != "none") {
+                    $("#sinin_bu").html("已签到").attr("disabled", "disabled");
+                }
+            }
+        });
+    })
+    function SinIn(e) {
+        $.ajax({
+            url: "/API/UserSinIn.ashx",
+            data: { action: "sinin", localtion: "1" },
+            type: "POST",
+            success: function (d) {
+                if (d != "" && d != "-1") {
+                    $(e).html("已签到");
+                    $(e).attr("disabled", "disabled");
+                }
+                else {
+                    alert("您尚未登录！！");
+                }
+            }
+        });
+    }
+</script>
+}

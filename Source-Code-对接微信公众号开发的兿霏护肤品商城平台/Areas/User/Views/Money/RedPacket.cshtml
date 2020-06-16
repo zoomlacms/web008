@@ -1,0 +1,81 @@
+﻿@using ZoomLa.BLL;
+@using ZoomLa.Model;
+@{
+    string state=ViewBag.state;
+    Layout = "~/Areas/User/Views/Shared/_layout.cshtml";
+    M_UserInfo mu = new B_User().GetLogin();
+    M_Group groupMod = new M_Group();
+    B_Group groupBll = new B_Group();
+    groupMod = groupBll.SelReturnModel(mu.GroupID);
+    string truename = mu.UserName;
+    if (!string.IsNullOrEmpty(mu.TrueName))
+    {
+        truename = mu.TrueName;
+    }
+}
+@section head{
+<title>领取红包</title>
+}
+@section content{
+<form method="post" action="GetRedPacket">
+<div id="pageflag" data-nav="shop" data-ban="UserInfo"></div>
+<div class="container margin_t10" hidden>
+    <ol class="breadcrumb">
+        <li><a title="会员中心" href="@Url.Action("Default","")">会员中心</a></li>
+        <li><a title="账户管理" href="@Url.Action("Userinfo","info")">账户管理</a></li>
+        <li><a title="领取红包" href="@Url.Action("RedPacket","Money")">领取红包</a></li>
+    </ol>
+</div>
+<div class="muser_top">
+<div class="container">
+<div class="media">
+<div class="media-left"><a href="/User/Info/UserBase"><img src="@mu.UserFace" alt="@mu.UserName" onerror="javascript:this.src='/Images/userface/noface.png';" /></a></div>
+<div class="media-body media-middle">
+<p class="muser_p"><span>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"获取当前登录用户真实姓名\"/}"))</span><span><span>@groupMod.GroupName</span></span><a href="/wxshare.aspx" id="wxshare">我的二维码</a></p>
+<h4>上次登陆时间：@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"获取当前登录用户上次登录时间\"/}")) </h4>
+<p><a href="/User/Info/UserBase"> 账号管理 </a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="container padding0_xs">
+@switch (state)
+{
+    case "0":
+         <div class="alert alert-danger">你尚未关注公众号,无法发放红包</div>
+        break;
+    case "1":
+        <div class="weui-cells weui-cells_form margin_top0">
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">匹配码</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入匹配码" name="flow" />
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">领取码</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入领取码" name="redcode" />
+                </div>
+            </div>
+        </div>
+        <input type="submit" class="weui-btn weui-btn_primary margin_top20" value="领取红包" />
+        break;
+    case "2":
+    
+ <div class="alert alert-danger">红包领取失败,原因:[@(ViewBag.err)] <a href="RedPacket"> 返回</a></div>
+        break;
+    case "3":
+   <div class="alert alert-info">红包领取成功,金额@(ViewBag.amount)</div>
+        break;
+}
+</div>
+</form>
+}
+@section script{
+<script>
+    $(function () {
+        $("form").validate();
+    })
+</script>
+}

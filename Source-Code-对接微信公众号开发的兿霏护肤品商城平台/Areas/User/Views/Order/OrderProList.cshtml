@@ -1,0 +1,297 @@
+﻿@using System.Data
+@using ZoomLa.BLL
+@using ZoomLa.BLL.Helper
+@using ZoomLa.BLL.Shop
+@using ZoomLa.Model
+@using ZoomLa.Model.Shop
+@using ZoomLa.Common
+@using ZoomLa.SQLDAL;
+@model ZoomLaCMS.Areas.User.Models.VM_OrderPro
+@{
+    Layout = "~/Areas/User/Views/Shared/_layout.cshtml";
+    B_Order_Exp expBll = new B_Order_Exp();
+    M_Order_Exp expMod = expBll.SelReturnModel(DataConverter.CLng(Model.orderMod.ExpressNum));
+    string compname = "";
+    string expcode = "";
+    if (expMod != null)
+    {
+        compname = expMod.ExpComp;
+        expcode = expMod.ExpNo;
+    }
+    int payplat = 0;
+    DataTable dt = SqlHelper.ExecuteTable(CommandType.Text, "select top 1 PayPlatID from ZL_Payment where PaymentNum='"+Model.orderMod.OrderNo+ "' order by PayTime DESC", null);
+    if (dt.Rows.Count > 0) { payplat = DataConvert.CLng(dt.Rows[0]["PayPlatID"].ToString()); }
+}
+@functions{
+    OrderCommon orderCom = new OrderCommon();
+    B_Product proBll = new B_Product();
+    M_Product proMod = new M_Product();
+
+    public string GetMyPrice(DataRow dr)
+    {
+        return OrderHelper.GetPriceStr(DataConverter.CDouble(dr["AllMoney"]), dr["AllMoney_Json"].ToString());
+    }
+    public string GetShopUrl(DataRow dr)
+    {
+        return orderCom.GetShopUrl(DataConverter.CLng(dr["StoreID"]), DataConverter.CLng(dr["ProID"]));
+    }	
+    public string GetTotal()
+    {
+        M_OrderList orderMod = Model.orderMod;
+        if (orderMod.Ordertype == 7 || orderMod.Ordertype == 9)
+        {
+            return orderMod.Ordersamount.ToString("f2") + "元";
+        }
+        else
+        {
+            return orderMod.Balance_price.ToString("f2") + "+" + orderMod.Freight.ToString("f2") + "=" + orderMod.Ordersamount.ToString("f2") + "元 (商品总价+运费)";
+        }
+    }
+    //除酒店,虚拟,旅游等外,显示快递信息
+    public bool ShowExp()
+    {
+        return (Model.orderMod.Ordertype != 7 && Model.orderMod.Ordertype != 9);
+    }
+    public string GetProImg(DataRow dr)
+    {
+        proMod = proBll.GetproductByid(DataConverter.CLng(dr["ProID"]));
+        if (proMod != null)
+            return ZoomLa.Components.SiteConfig.SiteOption.UploadDir + proMod.Thumbnails;
+        else
+            return "";
+    }
+}
+@section head{
+<title>订单详情</title>
+<link href="/dist/css/weui.min.css" rel="stylesheet" />
+<link href="/Template/HaoJiuDuo/style/global.css" rel="stylesheet" />
+<style>
+.orderpro_list,.orderpro_pay { font-family:"STHeiti","Microsoft YaHei","黑体","arial";}
+.orderpro_list .media-left img { width: 50px; height: 50px; }
+.weui_media_appmsg_thumb { border: 1px solid #ddd; width: 60px; height: 60px; }
+.weui_media_box .weui_media_title { margin-top: 0; font-size: 1.1em; }
+.weui_media_desc { margin-bottom: 0; }
+.orderpro_list a { text-decoration: none; }
+.orderpro_pay { padding: 10px 0; margin-top: 10px; background: #fff; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; }
+.orderpro_pay_t { margin-bottom: 5px; padding: 0 10px; font-size: 13px; }
+.exp_info_c p { margin-bottom:5px; color:#000; }
+.order_tt { text-align:center; background:#FFF; font-family:"STHeiti","Microsoft YaHei","黑体","arial";}
+.order_tt img { max-width:100%;}
+.order_tt ul { margin-bottom:0; padding-left:0;}
+.order_tt li { float:left; position:relative; padding-top:20px; padding-bottom:20px; width:33.3333%; color:#999;}
+.order_tt li i.fa-circle { color:#999;}
+.order_tt li i.fa-angle-right { display:block; position:absolute; top:50%; -webkit-transform:translate(0,-50%); transform:translate(0,-50%);}
+.order_tt li.active i.fa-circle { color:#00a5e0;}
+.alert h4 { margin-top:0;}
+.alert ul { margin-bottom:0;}
+.media { margin-top:5px;}
+@@media (max-width:768px){
+.order_t { display:none;}
+}
+</style>
+}
+@section content{
+<div class="nuser_top">
+<p>我的订单</p>
+</div>
+<div class="order_t"></div>
+    <div class="container padding0_xs">
+		<div class="order_tt">
+            <ul>
+            @if (Model.orderMod.OrderStatus == 0)
+            {
+                <li class="active">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <br />
+                    <span>订单创建</span>
+                </li>
+                <li>
+                    <i class="fa fa-angle-right"></i>
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <br />
+                    <span>待确认</span>
+                </li>
+                <li>
+                    <i class="fa fa-angle-right"></i>
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <br />
+                    <span>未完成</span>
+                </li>
+            }
+            else if (Model.orderMod.OrderStatus == 1)
+            {
+                <li class="active">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <br />
+                    <span>订单创建</span>
+                </li>
+                <li class="active">
+                    <i class="fa fa-angle-right"></i>
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <br />
+                    <span>已确认</span>
+                </li>
+                <li>
+                    <i class="fa fa-angle-right"></i>
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <br />
+                    <span>未完成</span>
+                </li>
+            }
+            else if (Model.orderMod.OrderStatus == 99)
+            {
+                <li class="active">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <br />
+                    <span>订单创建</span>
+                </li>
+                <li class="active">
+                    <i class="fa fa-angle-right"></i>
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <br />
+                    <span>已确认</span>
+                </li>
+                <li class="active">
+                    <i class="fa fa-angle-right"></i>
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <br />
+                    <span>已完成</span>
+                </li>
+            }
+            <div class="clearfix"></div>
+            </ul>
+        </div>
+        <div class="orderpro_list">
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__hd">共计 @Model.proDT.Rows.Count 个商品</div>
+                <div class="weui-panel__bd">
+                    @foreach (DataRow dr in Model.proDT.Rows)
+                    {
+                        <a href="@GetShopUrl(dr)" class="weui-media-box weui-media-box_appmsg" title="@dr["ProName"]">
+                            <div class="weui-media-box__hd"><img class="weui-media-box__thumb" src="@GetProImg(dr)" alt="@dr["ProName"]" onerror="javascript:this.src='/UploadFiles/nopic.gif';"></div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title">@dr["ProName"]</h4>
+                                <p class="weui-media-box__desc">
+                                    <span>数量：@dr["Pronum"]</span>
+                                    <span>总计金额：<i class="fa fa-rmb"></i> @GetMyPrice(dr)</span><br>
+                                    <span>日期：@DateHelper.ToDate(dr["AddTime"])</span>
+                                </p>
+                            </div>
+                        </a>
+                    }
+                </div>
+            </div>
+            @if (payplat == 1)
+            {
+                <div class="alert alert-info">
+                    <h4 style="margin-top:0;">好酒多线下付款账户信息：</h4>
+                    <ul class="media-list">
+                        <li class="media">
+                            <div class="media-left"><span style="display:block; width:80px; text-align:right;">单位全称：</span></div>
+                            <div class="media-body">浙江丰酿贸易有限公司</div>
+                        </li>
+                        <li class="media">
+                            <div class="media-left"><span style="display:block; width:80px; text-align:right;">账号：</span></div>
+                            <div class="media-body">201000120260519</div>
+                        </li>
+                        <li class="media">
+                            <div class="media-left"><span style="display:block; width:80px; text-align:right;">开户行：</span></div>
+                            <div class="media-body">浙江诸暨农村商业银行股份有限公司暨阳分支行</div>
+                        </li>
+                        <li class="media">
+                            <div class="media-left"><span style="display:block; width:80px; text-align:right;">收款人：</span></div>
+                            <div class="media-body">钱美丽</div>
+                        </li>
+                        <li class="media">
+                            <div class="media-left"><span style="display:block; width:80px; text-align:right;">账号：</span></div>
+                            <div class="media-body">6230 9106 9900 9322 459</div>
+                        </li>
+                        <li class="media">
+                            <div class="media-left"><span style="display:block; width:80px; text-align:right;">开户行：</span></div>
+                            <div class="media-body">浙江诸暨农村商业银行股份有限公司暨阳分支行</div>
+                        </li>
+                    </ul>
+                </div>
+            }
+        </div>
+        <div class="orderpro_pay">
+            <div class="orderpro_pay_t">
+                <span>@GetTotal()</span><br />
+                已付款：@Model.orderMod.Receivablesamount.ToString("f2")元<br />
+                @if (ShowExp())
+                {
+                    <div id="exp_div">
+                        快递公司：@compname<br />
+                        物流单号：@expcode<br />
+                    </div>
+                }
+                备注信息:@Model.orderMod.Ordermessage
+            </div>
+            <div class="padding10">
+                @if (Model.orderMod.Paymentstatus != (int)M_OrderList.PayEnum.HasPayed)
+                {
+                    <a href="/PayOnline/OrderPay.aspx?OrderCode=@Model.orderMod.OrderNo" id="PayUrl_A" class="btn btn-danger btn-block">前往付款</a>
+                }
+                @if (!string.IsNullOrEmpty(compname) && !string.IsNullOrEmpty(expcode))
+                {
+                    <a href="http://m.kuaidi100.com/index_all.html?type=@compname&postid=@expcode&callbackurl=@Request.Url.AbsoluteUri" class="btn btn-warning btn-block">查看物流信息</a>
+                }
+                <a href="javascript:history.back();" class="btn btn-info btn-block">返回列表</a>
+            </div>
+        </div>
+        @if (Model.clientList != null)
+        {
+            <div class="panel panel-primary" id="User_Div">
+                <div class="panel-heading"><span class="fa fa-user"></span><span class="margin_l5">客户详情</span></div>
+                <div class="panel-body">
+                    <table class="table table-bordered">
+                        <tr><td class="td_m">姓名</td><td>证件号</td><td>手机</td><td>备注</td></tr>
+                        @foreach (var client in Model.clientList)
+                        {
+                            <tr>
+                                <td>@client.Name</td>
+                                <td>@client.CertCode</td>
+                                <td>@client.Mobile</td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        }
+
+    </div>
+}
+@section script{
+<script>
+	$().ready(function(e){
+		$(".u_fixed").removeClass("hidden-xs");
+	})
+</script>
+}

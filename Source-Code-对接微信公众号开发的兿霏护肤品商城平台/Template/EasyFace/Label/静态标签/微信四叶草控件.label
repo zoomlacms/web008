@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>362</LabelID>
+    <LabelName>微信四叶草控件</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="visible-xs"&gt;
+&lt;!--menu float begin--&gt;
+&lt;section class="visible-xs"&gt;
+&lt;div class="mask_menu" style="display:none;"&gt;&lt;/div&gt;
+&lt;div class="menu" id="menufloat"&gt;&lt;i class="fa fa-th-large icon-menu"&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;div class="menu-c" id="menufloat-c" style="display:none;"&gt;
+&lt;div class="menu-c-out"&gt;
+&lt;div class="menu-c-inner"&gt;
+&lt;a class="a-home" href="/" title="首页"&gt;&lt;/a&gt;
+&lt;a class="a-tel" href="tel:021-64149631" title="联系官方"&gt;&lt;/a&gt;
+&lt;a id="serviceUrl" class="a-server" href="https://jq.qq.com/?_wv=1027&amp;k=43OCi5v" title="QQ群"&gt;&lt;/a&gt;
+&lt;a class="a-member" href="/User/" title="会员中心"&gt;&lt;/a&gt;
+&lt;a class="a-search" href="/Class_8/Default.aspx" title="首页"&gt;&lt;/a&gt;
+&lt;a class="a-cart" href="/Cart/Cart.aspx?ProClass=1" title="购物车"&gt;&lt;/a&gt;
+&lt;a class="a-collect" href="/Index" title="留言"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

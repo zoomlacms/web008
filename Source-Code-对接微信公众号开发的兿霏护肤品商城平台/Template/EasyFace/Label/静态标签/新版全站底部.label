@@ -1,0 +1,57 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>352</LabelID>
+    <LabelName>新版全站底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="footer_top"&gt;
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 col-md-offset-2"&gt;&lt;div class="footer_top_l"&gt;&lt;img src="{$CssDir/}images/footer_pic1.png" alt="正品保障" /&gt;&lt;p&gt;正品保障&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"&gt;&lt;div class="footer_top_l"&gt;&lt;img src="{$CssDir/}images/footer_pic2.png" alt="金牌服务" /&gt;&lt;p&gt;金牌服务&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"&gt;&lt;div class="footer_top_l"&gt;&lt;img src="{$CssDir/}images/footer_pic3.png" alt="万千信赖" /&gt;&lt;p&gt;万千信赖&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"&gt;&lt;div class="footer_top_l"&gt;&lt;img src="{$CssDir/}images/footer_pic4.png" alt="安全可靠" /&gt;&lt;p&gt;安全可靠&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="footer"&gt;
+&lt;div class="container"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(53)/}"&gt;关于我们&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(54)/}"&gt;正品保障&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(55)/}"&gt;购物指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(56)/}"&gt;支付方式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(57)/}"&gt;配送方式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(58)/}"&gt;常见问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(59)/}"&gt;联系我们&lt;/a&gt;&lt;/li&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/ul&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"&gt;&lt;a href="/" class="footer_logo"&gt;&lt;img src="{$CssDir/}images/logo_w.svg" alt="{$SiteName/}" /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="col-lg-8 col-md-8 col-sm-8 col-xs-12"&gt;&lt;p&gt;{$Copyright/}&lt;/p&gt;&lt;/div&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"&gt;&lt;a href="javaScript:;" class="footer_code"&gt;&lt;img src="{$CssDir/}images/weixin_code.jpg" alt="{$SiteName/}" /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--全站底部--&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

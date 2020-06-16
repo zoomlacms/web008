@@ -1,0 +1,78 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>分销中心</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script>
+$.post("/API/UserCheck.ashx?action=HasLogged", "", function (data) {
+	if (!data || data == "-1") {
+		location = "/wxpromo.aspx?r="+window.location.href;
+	}
+});
+</script>
+</head>
+<body>
+
+<div class="fenxiao_top">
+<i class="fa fa-users"></i> 我的下级
+<span class="pull-right">今日返利：0积分</span>
+</div>
+
+<div class="fenxiao_all">
+<table class="table table-bordered">
+<tr>
+<td>级数</td>
+<td>消费金额</td>
+<td>成员数（人）</td>
+</tr>
+<tr>
+<td>一级</td>
+<td style="padding:0;">
+<a href="/Class_4/NodeNews.aspx"><span><i class="fa fa-rmb"></i> {ZL.Label id="获取当前用户一级会员消费总金额" /}</span><br/>查看明细</a>
+</td>
+<td style="padding:0;">
+<a href="/Class_4/NodeNews.aspx">
+<span>{ZL.Label id="获取当前用户一级会员总数" /}</span><br/>
+查看成员</a>
+</td>
+</tr>
+<tr>
+<td>二级</td>
+<td style="padding:0;">
+<a href="/Class_4/NodeHot.aspx"><span><i class="fa fa-rmb"></i> {ZL.Label id="获取当前用户二级会员消费总金额" /}</span><br/>查看明细</a>
+</td>
+<td style="padding:0;">
+<a href="/Class_4/NodeHot.aspx"><span>{ZL.Label id="获取当前用户二级会员总数" /}</span><br/>查看成员</a>
+</td>
+</tr>
+<tr>
+<td>三级</td>
+<td style="padding:0;">
+<a href="/Class_4/NodeElite.aspx"><span><i class="fa fa-rmb"></i> {ZL.Label id="获取当前用户三级会员消费总金额" /}</span><br/>查看明细</a>
+</td>
+<td style="padding:0;">
+<a href="/Class_4/NodeElite.aspx"><span>{ZL.Label id="获取当前用户三级会员总数" /}</span><br/>查看成员</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div style="height:52px;"></div>
+<div class="wei_bottom">
+<ul>
+<li><a href="{ZL:GetNodeLinkUrl(8)/}"><i class="fa fa-home"></i>首页 </a></li>
+<li><a href="{ZL:GetNodeLinkUrl(9)/}"><i class="fa fa-briefcase"></i>产品专区</a></li>
+<li><a href="/Guest/Ask/Add1.aspx"><i class="fa fa-question-circle"></i>咨询</a></li>
+<li><a href="/Index"><i class="fa fa-paw"></i>论坛</a></li>
+<li class="active"><a href="/User"><i class="fa fa-user"></i>我的</a></li>
+<div class="clearfix"></div>
+</ul>
+</div>
+</body>
+</html>
